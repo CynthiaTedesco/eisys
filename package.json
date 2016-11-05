@@ -1,5 +1,8 @@
 {
   "name": "eisys",
   "version": "0.0.1",
-  "description": "Eisys"
+  "description": "Eisys",
+  "scripts": {
+    "start": "node js/server.js"
+  }
 }
