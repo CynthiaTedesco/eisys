@@ -4,5 +4,10 @@
   "description": "Eisys",
   "scripts": {
     "start": "node js/server.js"
-  }
+  },
+  "repository": {
+	"type": "git",
+  	"url": "git://github.com/CynthiaTedesco/eisys.git"
+  },
+  "license": "MIT"
 }
