@@ -1,12 +1,5 @@
 {
   "name": "eisys",
   "version": "0.1",
-  "description": "Eisys",
-  "engines": {
-    "node": "5.9.1"
-  },
-  "main": "index.js",
-  "keywords": [
-    "eisys"
-  ]
+  "description": "Eisys"
 }
