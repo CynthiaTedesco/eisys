@@ -2,8 +2,16 @@
   "name": "eisys",
   "version": "0.0.1",
   "description": "Eisys",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "main": "index.js",
   "scripts": {
-    "start": "node js/server.js"
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3"
   },
   "repository": {
 	"type": "git",
