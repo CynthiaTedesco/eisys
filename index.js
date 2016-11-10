@@ -1,4 +1,6 @@
 var express = require('express');
+var favicon = require('serve-favicon');
+var path = require("path");
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -16,7 +18,7 @@ app.get('/', function(request, response) {
 });
 
 // setting favicon
-app.use(express.favicon(__dirname + '/public/images/favicon.ico')); 
+app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
 app.get('/conocenos', function(request, response) {
   response.render('pages/conocenos', {title:'CONOCENOS'});
