@@ -15,6 +15,9 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+// setting favicon
+app.use(express.favicon(__dirname + '/public/images/favicon.ico')); 
+
 app.get('/conocenos', function(request, response) {
   response.render('pages/conocenos', {title:'CONOCENOS'});
 });
