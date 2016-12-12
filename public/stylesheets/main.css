@@ -45,6 +45,7 @@ nav.navbar{
   top: 0;
   height: 5em;
   border: none;
+  margin-top: 4em;
 }
 
 div.collapse.navbar-collapse{
@@ -66,4 +67,20 @@ div.collapse.navbar-collapse{
 
 .m-t-7em{
   margin-top: 7em;
+}
+
+.div-header{
+  background: #ACBDC6;
+  height: 4em;
+}
+
+.div-footer{
+  border-top: orange solid 1px;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.footer-border{
+  border-right: solid 1px orange;
 }
