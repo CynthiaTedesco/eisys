@@ -25,3 +25,41 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
+div.jumbotron{
+  padding-top: 10em;
+}
+
+/* NAV BAR */
+a.navbar-brand{
+  padding:initial;
+}
+
+a.navbar-brand img{
+  padding-left: 1em;
+}
+
+nav.navbar{
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 5em;
+  border: none;
+}
+
+div.collapse.navbar-collapse{
+  padding-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color:white;
+}
+
+.navbar div.container-fluid{
+  padding: initial;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-bottom: 2px solid #0A3A4A;
+  height: 4em
+}

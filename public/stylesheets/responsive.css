@@ -1,0 +1,26 @@
+@media screen and (min-width:768px){
+	a.navbar-brand img {
+	  	position: absolute;
+    	bottom: 0;
+	}
+
+	.navbar-default .navbar-nav>.active>a{
+		color: white;
+    	background-color: #0A3A4A;
+	}
+
+	.navbar-default .navbar-nav>li>a{
+		border-radius: 2em;
+    	padding-bottom: 0.5em;
+    	padding-top: 0.5em;
+    	border: solid 2px #0A3A4A;
+	}
+
+	.navbar-nav>li {
+	    margin-left: 1em;
+	}
+
+	.navbar div.container-fluid{
+		height: 6em
+	}
+}
