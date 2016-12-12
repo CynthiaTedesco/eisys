@@ -23,4 +23,8 @@
 	.navbar div.container-fluid{
 		height: 6em
 	}
+
+	.footer-border{
+	  	border-right: solid 1px orange;
+	}
 }
