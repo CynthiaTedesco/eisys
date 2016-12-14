@@ -86,7 +86,8 @@ div.collapse.navbar-collapse{
 }
 
 .footer {
-  background: url("../images/footer/bk-datos.jpg") no-repeat;  
+  background: url("../images/footer/bk-datos.jpg") no-repeat;
+  background-size: cover;
   color:white;
   padding-right: 0;
 }
@@ -102,6 +103,7 @@ div.collapse.navbar-collapse{
   width: 60%;
   border-bottom: 1px solid white;
   padding-bottom: 0.7em;
+  font-size: initial;
 }
 .footer-div a span{
   font-size: 1em;
@@ -118,4 +120,8 @@ div.collapse.navbar-collapse{
   width: 100%;
   padding-left: 3%;
   margin-top: 1em;
+}
+
+#follow-twitter, #follow-in{
+  margin: 1em 0;
 }
