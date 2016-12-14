@@ -84,3 +84,38 @@ div.collapse.navbar-collapse{
 .footer-border{
   border-right: none;
 }
+
+.footer {
+  background: url("../images/footer/bk-datos.jpg") no-repeat;  
+  color:white;
+  padding-right: 0;
+}
+
+.footer-logo-div{
+  padding:4%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.footer-div>a, .footer-div>span {
+  margin: 0.5em 1em 0;
+  width: 60%;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.7em;
+}
+.footer-div a span{
+  font-size: 1em;
+  color: white;
+}
+.footer-div a:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer-div{
+  border:0;
+  display: -webkit-inline-box;
+  display: flex;
+  width: 100%;
+  padding-left: 3%;
+  margin-top: 1em;
+}

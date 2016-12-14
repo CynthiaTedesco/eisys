@@ -27,4 +27,13 @@
 	.footer-border{
 	  	border-right: solid 1px orange;
 	}
+
+	.footer {
+	  background: #c0c0c0;
+	  color:white;
+	}
+
+	.footer-social{
+		background: url("../images/footer/bk-social.jpg") no-repeat;  
+	}
 }
