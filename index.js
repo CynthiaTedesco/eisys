@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 // passing to express the template index.js to solve first page.
 app.get('/', function(request, response) {
-  response.render('pages/index');
+  response.render('pages/index',{slideshow_caption:'ESTE ES EL CAPTION'});
 });
 
 // setting favicon
