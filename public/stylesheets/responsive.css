@@ -10,10 +10,11 @@
 	}
 
 	.navbar-default .navbar-nav>li>a{
-		border-radius: 2em;
+		/*border-radius: 2em;*/
     	padding-bottom: 0.5em;
     	padding-top: 0.5em;
-    	border: solid 2px #0A3A4A;
+    	    margin: auto;
+    	/*border: solid 2px #0A3A4A;*/
 	}
 
 	.navbar-nav>li {
@@ -24,10 +25,6 @@
 		height: 6em
 	}
 
-	.footer-border{
-	  	border-right: solid 1px orange;
-	}
-
 	.footer {
 	  background: #c0c0c0;
 	  color:white;
@@ -35,6 +32,11 @@
 
 	.footer-social{
 		background: url("../images/footer/bk-social.jpg") no-repeat;  
-		padding: 4em;
+		padding: 4em 4em 0;
+    	border-left: 1px solid orange;
+	}
+
+	.div-footer{
+  		border-top: orange solid 1px;
 	}
 }

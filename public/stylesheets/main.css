@@ -27,7 +27,11 @@
     max-width: 100%; }
 
 div.jumbotron{
-  padding-top: 10em;
+  padding: 10em 0px;
+}
+
+button.navbar-toggle {
+      width: 3em;
 }
 
 /* NAV BAR */
@@ -46,7 +50,7 @@ nav.navbar{
   top: 0;
   height: 5em;
   border: none;
-  margin-top: 4em;
+  margin-top: 5em;
   z-index: 1;
 }
 
@@ -77,14 +81,10 @@ div.collapse.navbar-collapse{
 }
 
 .div-footer{
-  border-top: orange solid 1px;
+  border-top: none;
   width: 100%;
   margin-right: 0;
   margin-left: 0;
-}
-
-.footer-border{
-  border-right: none;
 }
 
 .footer {
@@ -147,4 +147,96 @@ div.slideshow.jumbotron{
 
 .v-center.left{
   left:15%;
+}
+
+.div-header{
+  background: #ACBDC6; 
+}
+
+.div-lang{
+  float: right;
+  height: 65%;
+  width: 10em;
+}
+
+.div-lang>select{
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-weight: bold;
+}
+
+.footer-div>img{
+  max-height: 34px;
+}
+
+
+
+span{
+  float:left;  
+}
+.cont{
+  border: solid 2px #0A3A4A;
+  height: 2.6em;
+        border-left: none;
+    border-right: none;
+        width: 5.4em;
+}
+div.cont>div:nth-child(1){
+  float:left;
+  position:relative;
+  height: 2em;
+}
+div.cont>div:nth-child(3){
+  position:relative;
+  height: 2em;
+  z-index:1;
+  float:left;
+}
+.a{
+  top:0;
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) skewX(-20deg);
+  transform: scaleX(1) scaleY(1) scaleZ(1) skewX(-20deg); 
+   -webkit-transform-origin: 50% 50% 0; 
+   transform-origin: 50% 50% 0; 
+}
+.b{
+  bottom:0;
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) skewX(20deg);
+  transform: scaleX(1) scaleY(1) scaleZ(1) skewX(20deg); 
+   -webkit-transform-origin: 50% 50% 0; 
+   transform-origin: 50% 50% 0;
+}
+.a,.b{
+    height: 1.25em;
+    width: 0em;
+    position: absolute;
+    border-left: solid 2px #0A3A4A;
+    z-index: 0;
+    left: -4px;
+}
+.c{
+  margin: 0.5em 1em;
+}
+.d{
+  top:0;
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) skewX(20deg);
+  transform: scaleX(1) scaleY(1) scaleZ(1) skewX(20deg); 
+   -webkit-transform-origin: 50% 50% 0; 
+   transform-origin: 50% 50% 0; 
+}
+.e{
+  bottom:0;
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) skewX(-20deg);
+  transform: scaleX(1) scaleY(1) scaleZ(1) skewX(-20deg); 
+   -webkit-transform-origin: 50% 50% 0; 
+   transform-origin: 50% 50% 0;
+}
+.d, .e{
+    height: 1.25em;
+    width: 0;
+    position: absolute;
+    border-right: solid 2px #0A3A4A;
+    z-index: 0;
+    right: -4px;
 }
