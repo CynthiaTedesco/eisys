@@ -14,7 +14,38 @@ app.set('view engine', 'ejs');
 
 // passing to express the template index.js to solve first page.
 app.get('/', function(request, response) {
-  response.render('pages/index',{slideshow_caption:'ESTE ES EL CAPTION'});
+  response.render('pages/index',{slideshows:[
+  								{ divClass: 'item active',	
+  								  imgSrc: 'images/slideshow/slide01.jpg',
+  								  imgAlt: 'first slide',
+  								  caption: 'caption1'
+  								},
+  								{ divClass: 'item',	
+  								  imgSrc: 'images/slideshow/slide02.jpg',
+  								  imgAlt: 'second slide',
+  								  caption: 'caption2'
+  								},
+  								{ divClass: 'item',	
+  								  imgSrc: 'images/slideshow/slide03.jpg',
+  								  imgAlt: 'third slide',
+  								  caption: 'caption3'
+  								},
+  								{ divClass: 'item',	
+  								  imgSrc: 'images/slideshow/slide04.jpg',
+  								  imgAlt: 'fourth slide',
+  								  caption: 'caption4'
+  								},
+  								{ divClass: 'item',	
+  								  imgSrc: 'images/slideshow/slide05.jpg',
+  								  imgAlt: 'fifth slide',
+  								  caption: 'caption5'
+  								},
+  								{ divClass: 'item',	
+  								  imgSrc: 'images/slideshow/slide06.jpg',
+  								  imgAlt: 'sixth slide',
+  								  caption: 'caption6'
+  								}
+  								]});
 });
 
 // setting favicon

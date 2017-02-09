@@ -19,36 +19,18 @@
           <li data-target="#myCarousel" data-slide-to="4"></li>
           <li data-target="#myCarousel" data-slide-to="5"></li>
         </ol>
-        <div id="carousel-inner-lexar" class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img class="first-slide img-responsive" src="images/slideshow/slide01.jpg" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <p class="">
-                  <span><%= slideshow_caption %></span>
-                </p>
+        <div class="carousel-inner" role="listbox">
+          <% for(var i=0; i<slideshows.length; i++) {%>
+            <div class="<%= slideshows[i].divClass %>" >
+              <img src="<%= slideshows[i].imgSrc %>" alt="<%= slideshows[i].imgAlt %>">
+              <div class="container">
+                <div class="carousel-caption">
+                  <p class="">
+                    <span><%= slideshows[i].caption %></span>
+                </div>
               </div>
-            </div>
           </div>
-          <div class="item">
-            <img class="second-slide" src="images/slideshow/slide02.jpg" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <p class="">
-                  <span><%= slideshow_caption %></span>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img class="third-slide" src="images/slideshow/slide03.jpg" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <p class="">
-                  <span><%= slideshow_caption %></span>
-                </p>
-              </div>
-            </div>
-          </div>
+          <% } %>
         </div>
         <a class="left carousel-control hidden-xs hidden-sm" href="#myCarousel" role="button" data-slide="prev">
           <img class="v-center left" src="images/slideshow/arrow-left-off.png" aria-hidden="true"></img>
