@@ -1,7 +1,20 @@
 var express = require('express');
 var favicon = require('serve-favicon');
 var path = require("path");
+var i18n = require('i18n');
+var cookieParser = require('cookie-parser');
+var js = require('./public/js/scripts');
+var obj = {};
+
+i18n.configure({
+    locales: ['en', 'es'],
+    register: obj,
+    directory: __dirname + '/locales'
+});
+
 var app = express();
+app.use(cookieParser());
+app.use(i18n.init);
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -14,43 +27,44 @@ app.set('view engine', 'ejs');
 
 // passing to express the template index.js to solve first page.
 app.get('/', function (request, response) {
+    i18n.setLocale(request, js.resolveLanguage(request.cookies));
     response.render('pages/index', {
         slideshows: [
             {
                 divClass: 'item active',
                 imgSrc: 'images/slideshow/slide01.jpg',
                 imgAlt: 'first slide',
-                caption: 'caption1'
+                caption: obj.__('caption1')
             },
             {
                 divClass: 'item',
                 imgSrc: 'images/slideshow/slide02.jpg',
                 imgAlt: 'second slide',
-                caption: 'caption2'
+                caption: obj.__('caption2')
             },
             {
                 divClass: 'item',
                 imgSrc: 'images/slideshow/slide03.jpg',
                 imgAlt: 'third slide',
-                caption: 'caption3'
+                caption: obj.__('caption3')
             },
             {
                 divClass: 'item',
                 imgSrc: 'images/slideshow/slide04.jpg',
                 imgAlt: 'fourth slide',
-                caption: 'caption4'
+                caption: obj.__('caption4')
             },
             {
                 divClass: 'item',
                 imgSrc: 'images/slideshow/slide05.jpg',
                 imgAlt: 'fifth slide',
-                caption: 'caption5'
+                caption: obj.__('caption5')
             },
             {
                 divClass: 'item',
                 imgSrc: 'images/slideshow/slide06.jpg',
                 imgAlt: 'sixth slide',
-                caption: 'caption6'
+                caption: obj.__('caption6')
             }
         ]
     });
@@ -67,6 +81,15 @@ app.get('/contacto', function (request, response) {
 });
 app.get('/servicios', function (request, response) {
     response.render('pages/servicios', {title: 'SERVICIOS'});
+});
+
+app.get('*/es', function (request, response, next) {
+    response.cookie('lang','es',{})
+    response.redirect(request.get('referer'));
+});
+app.get('*/en', function (request, response, next) {
+    response.cookie('lang','en',{})
+    response.redirect(request.get('referer'));
 });
 
 app.listen(app.get('port'), function () {
