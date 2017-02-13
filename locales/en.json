@@ -1,5 +1,9 @@
 {
-  "greetings": "Hello",
+  "nav.home":"HOME",
+  "nav.know.us":"LET'S KNOW US",
+  "nav.services":"SERVICES",
+  "nav.contact.us":"CONTACT US",
+
   "caption1":"We believe in a close relationship with the client, based on a thorough understanding of his needs.",
   "caption2":"We give a preferential, customized and professional treatment to each client.",
   "caption3":"We provide a special, flexible, scalable, and high-quality solution that fits our clients' daily realities.",

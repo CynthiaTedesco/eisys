@@ -1,5 +1,9 @@
 {
-  "greetings": "Hola",
+  "nav.home":"INICIO",
+  "nav.know.us":"CONOCENOS",
+  "nav.services":"SERVICIOS",
+  "nav.contact.us":"CONTACTANOS",
+
   "caption1":"Creemos que debemos tener una relación cercana con el cliente, fundada en el entendimiento profundo de sus necesidades.",
   "caption2":"Le damos un trato preferencial, personalizado y profesional a cada uno de nuestros clientes.",
   "caption3":"Brindamos una solución especial, flexible, escalable y de alta calidad que se ajusta a la realidad diaria de nuestros clientes.",

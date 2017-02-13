@@ -115,14 +115,6 @@ div.collapse.navbar-collapse{
   text-decoration: none;
   cursor: pointer;
 }
-.footer-div{
-  border:0;
-  display: -webkit-inline-box;
-  display: flex;
-  width: 100%;
-  padding-left: 3%;
-  margin-top: 1em;
-}
 
 #follow-twitter, #follow-in{
   margin: 1em 0;
@@ -239,4 +231,75 @@ div.cont>div:nth-child(3){
     border-right: solid 2px #0A3A4A;
     z-index: 0;
     right: -4px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+.language-dropdown {
+    /* Size and position */
+    position: relative;
+    float: right;
+    height: 3em;
+    width: 10em;
+
+    /* Styles */
+    background: white;
+
+    outline: none;
+
+    /* Font settings */
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+
+    cursor: pointer;
+}
+
+.closed .dropdown {
+    opacity: 0;
+}
+
+.opened .dropdown {
+    opacity: 1;
+    z-index: 1;
+}
+
+.language-span{
+    width: 100%;
+    height: 100%;
+    padding: 0.8em 2em;
+}
+
+/* Botoncito */
+#ddCurrentLang:after {
+    content: url('../images/nav/idioma-arrow.png');
+    position: absolute;
+    right: 2em;
+    top: 0.7em;
+}
+
+.language-dropdown ul.language{
+    position: relative;
+    padding: 0;
+    margin-bottom: 0px;
+    background: white;
+    top: 3em;
+    height: 3em;
+    list-style-type: none;
+}
+
+.language-dropdown ul.language li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.language-dropdown ul.language li a{
+    color:black;
+    display: block;
+    height: 100%;
+    padding: 0.8em 2em
+}
+
+.language-dropdown ul.language li a:hover{
+    text-decoration: none;
 }

@@ -1,7 +1,10 @@
+// delete process.env["DEBUG_FD"];
 var express = require('express');
 var favicon = require('serve-favicon');
 var path = require("path");
 var i18n = require('i18n');
+// var $ = require('jquery')(require("jsdom").jsdom().defaultView);
+
 var cookieParser = require('cookie-parser');
 var js = require('./public/js/scripts');
 var obj = {};
@@ -28,6 +31,7 @@ app.set('view engine', 'ejs');
 // passing to express the template index.js to solve first page.
 app.get('/', function (request, response) {
     i18n.setLocale(request, js.resolveLanguage(request.cookies));
+
     response.render('pages/index', {
         slideshows: [
             {
@@ -66,7 +70,11 @@ app.get('/', function (request, response) {
                 imgAlt: 'sixth slide',
                 caption: obj.__('caption6')
             }
-        ]
+        ],
+        home: obj.__('nav.home'),
+        know: obj.__('nav.know.us'),
+        services: obj.__('nav.services'),
+        contact: obj.__('nav.contact.us')
     });
 });
 

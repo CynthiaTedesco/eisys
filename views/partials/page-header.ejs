@@ -1,19 +1,14 @@
+<%
+prinnt = function () {
+    console.log("esto se imprime si desde el ejs pongo: onclick=\< %=prinnt()%  >");
+}
+%>
 <div class="div-header">
 	<img src="images/nav/goldpartner.png" alt="oracle-gold-partner-logo">
-	<div class="div-lang">
-		<!--<select>-->
-		    <!--<option value="es"><a href="/es">ESPAÑOL</a></option>-->
-            <!--<option value="en"><a href="/en">ENGLISH</a></option>-->
-  		<!--</select>-->
-        <ul>
-            <li class="active"><a href="/es">es</a></li>
-            <li><a href="/en">en</a></li>
+    <div id="dd9" class="language-dropdown closed" tabindex="1">
+        <span id="ddCurrentLang" class="language-span">ESPAÑOL</span>
+        <ul class="language dropdown">
+            <li class="lang"><a href="/en" id="ddLang">ENGLISH</a></li>
         </ul>
-	</div>
-	<!--<div id="dd9" class="language-dropdown closed" tabindex="1">-->
-		<!--<span id="ddCurrentLang" class="language">ESPAÑOL</span>-->
-		<!--<ul class="language dropdown">-->
-			<!--<li class="lang"><a id="ddLang">ENGLISH</a></li>-->
-		<!--</ul>-->
-	<!--</div>-->
+    </div>
 </div>
