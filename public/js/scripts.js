@@ -5,9 +5,41 @@
 var exports = module.exports = {};
 
 var defaultLang = 'es';
+var spanishObj = {
+    label: 'ESPAÑOL',
+    url: '/es'
+};
+var englishObj = {
+    label: 'ENGLISH',
+    url: '/en'
+};
+
+var selectedLang;
+var nonSelectedLang;
+
+exports.getSelectedLang = function(){
+    return selectedLang;
+}
+
+exports.getNonSelectedLang = function () {
+    return nonSelectedLang;
+}
 
 exports.resolveLanguage = function(cookies) {
-    return cookies.lang ? cookies.lang : defaultLang;
+    if (cookies.lang){
+        if (cookies.lang === 'es'){
+            selectedLang = spanishObj;
+            nonSelectedLang = englishObj;
+        } else {
+            selectedLang = englishObj;
+            nonSelectedLang = spanishObj;
+        }
+        return cookies.lang;
+    } else {
+        selectedLang = spanishObj;
+        nonSelectedLang = englishObj;
+        return defaultLang;
+    }
 }
 
 module.exports = exports;
