@@ -315,8 +315,8 @@ div.cont>div:nth-child(3){
     display: inline-block;
 }
 
-div.services {
-    background: #F7F8FA;
+div.home-services, div.home-products {
+    background: #F6F8F9;
 }
 
 div.home-links{
@@ -362,7 +362,7 @@ div.know-us a:hover, div.contact-us a:hover{
 }
 
 div.commitment{
-    padding: 1em 0;
+    padding: 1em 0 0;
     margin-right: 0;
     display: block;
 }
@@ -389,4 +389,46 @@ hr{
 
 .alliances-logos{
     padding: 0 20%;
+}
+
+.home-products{
+    text-align: center;
+    margin:0;
+}
+
+.home-products>div {
+    display: block;
+    overflow: hidden;
+}
+
+.home-products>div>div{
+    padding:3em;
+}
+
+.home-products>div img{
+    display: initial;
+}
+.home-products div.striked-title {
+    display: inline-block;
+    padding: 2em 1em;
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 0.2em;
+}
+
+.striked-title:before,
+.striked-title:after {
+    background: #ddd;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 400%;
+}
+.striked-title:before {
+    right: 100%;
+}
+.striked-title:after {
+    left: 100%;
 }

@@ -70,8 +70,30 @@
             </div>
         </div>
     </div> <!--row-->
-    <div class="text-center services">servicios</div>
-    <div class="text-center">productos</div>
+    <div class="text-center home-services">
+        <div class="title"><%=menu.services%></div>
+        <div class="orange-text"><%=contentManagement%></div>
+        <div class="know-us"><a href="/servicios"><%=readMore%></a></div>
+    </div>
+    <div class="row home-products">
+        <div><div class="striked-title"><%=products%></div></div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-6">
+                <img src="images/home/productos-content.png" alt="content-products" class="img-responsive">
+            </div>
+            <div class="col-xs-6">
+                <img src="images/home/productos-portal.png" alt="portal-products" class="img-responsive">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-6">
+                <img src="images/home/productos-sites.png" alt="sites-products" class="img-responsive">
+            </div>
+            <div class="col-xs-6">
+                <img src="images/home/productos-cloud.png" alt="cloud-products" class="img-responsive">
+            </div>
+        </div>
+    </div>
 </div>
 <% include ../partials/page-footer.ejs %>
 </body>

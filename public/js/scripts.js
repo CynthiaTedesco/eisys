@@ -17,6 +17,10 @@ var englishObj = {
 var selectedLang;
 var nonSelectedLang;
 
+exports.getLanguages = function(){
+    return ['es', 'en'];
+}
+
 exports.getSelectedLang = function(){
     return selectedLang;
 }

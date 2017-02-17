@@ -3,7 +3,6 @@ var express = require('express');
 var favicon = require('serve-favicon');
 var path = require("path");
 var i18n = require('i18n');
-// var $ = require('jquery')(require("jsdom").jsdom().defaultView);
 
 var cookieParser = require('cookie-parser');
 var js = require('./public/js/scripts');
@@ -19,21 +18,27 @@ i18n.configure({
 var app = express();
 app.use(cookieParser());
 app.use(i18n.init);
-
 app.set('port', (process.env.PORT || 5000));
-
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 // change the rendering engine 
 app.set('view engine', 'ejs');
+// setting favicon
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 var commons = {};
 
 // passing to express the template index.js to solve first page.
+app.get('/*', function (request, response, next) {
+    //it prevents double preparation if request comes from language change
+    if (js.getLanguages().indexOf(request.url.replace('/','')) < 0){
+        prepare(request);
+    }
+    next();
+});
 app.get('/', function (request, response) {
-    prepare(request);
     response.render('pages/index', getLocals({
         slideshows: [
             {
@@ -75,24 +80,20 @@ app.get('/', function (request, response) {
         ],
         commitment: {title: obj.__('commitment.title'),
                      text: obj.__('commitment.text')},
-        alliances: obj.__('business.alliances')
-
+        alliances: obj.__('business.alliances'),
+        contentManagement: obj.__('content.management'),
+        readMore: obj.__('read.more'),
+        products: obj.__('products')
     }));
 });
 
-// setting favicon
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
 app.get('/conocenos', function (request, response) {
-    prepare(request);
     response.render('pages/conocenos', getLocals({title: 'CONOCENOS'}));
 });
 app.get('/contacto', function (request, response) {
-    prepare(request);
     response.render('pages/contacto', getLocals({title: 'CONTACTO'}));
 });
 app.get('/servicios', function (request, response) {
-    prepare(request);
     response.render('pages/servicios', getLocals({title: 'SERVICIOS'}));
 });
 

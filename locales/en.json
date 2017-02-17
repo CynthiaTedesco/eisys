@@ -14,5 +14,8 @@
   "commitment.title":"EISYS COMMITMENT (?)",
   "commitment.text":"In Eisys, we consider that our clients' time is very important; therefore, we commit to meet all agreed deadlines so that the project adds value to the business when the clients need it.",
 
-  "business.alliances": "BUSINESS ALLIANCES"
+  "business.alliances":"BUSINESS ALLIANCES",
+  "content.management":"EISYS CONTENT MANAGEMENT",
+  "read.more": "READ MORE",
+  "products": "PRODUCTS"
 }
