@@ -77,7 +77,10 @@ app.get('/', function (request, response) {
                 services: obj.__('nav.services'),
                 contact: obj.__('nav.contact.us')},
         dropDown: {selected: js.getSelectedLang(),
-                    nonSelected: js.getNonSelectedLang()}
+                   nonSelected: js.getNonSelectedLang()},
+        commitment: {title: obj.__('commitment.title'),
+                     text: obj.__('commitment.text')},
+        alliances: obj.__('business.alliances')
 
     });
 });

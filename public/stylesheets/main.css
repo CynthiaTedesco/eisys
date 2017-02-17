@@ -27,7 +27,7 @@
     max-width: 100%; }
 
 div.jumbotron{
-  padding: 10em 0px;
+  padding: 1em 0px;
 }
 
 button.navbar-toggle {
@@ -270,7 +270,7 @@ div.cont>div:nth-child(3){
 }
 
 /* Botoncito */
-#ddCurrentLang:after {
+.language-dropdown:after {
     content: url('../images/nav/idioma-arrow.png');
     position: absolute;
     right: 2em;
@@ -302,4 +302,90 @@ div.cont>div:nth-child(3){
 
 .language-dropdown ul.language li a:hover{
     text-decoration: none;
+}
+
+.alliance{
+    background: #F6F7F9;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 1em 0;
+}
+
+.alliance>img{
+    display: inline-block;
+}
+
+div.services {
+    background: #F7F8FA;
+}
+
+div.home-links{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    background-image: url(../images/home/foto-compromiso.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-top: 5%;
+}
+
+div.home-links>div{
+    padding: 10% 25%;
+}
+
+div.home-links>div>div{
+    margin: 1em 0;
+    padding: 5%;
+    border-radius: 0.5em;
+}
+
+div.know-us{
+    background: #ACBDC6;
+}
+
+div.contact-us{
+    background: #F6F7F9;
+}
+
+div.know-us a, div.contact-us a{
+    background: transparent;
+    color: black;
+    font-family: raleway-bold;
+    letter-spacing: 0.15em;
+}
+
+div.know-us a:hover, div.contact-us a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.commitment{
+    padding: 1em 0;
+    margin-right: 0;
+    display: block;
+}
+
+div.paragraph{
+    text-align: left;
+    font-family: raleway;
+}
+
+div.title{
+    margin-bottom: 1.5em;
+    font-size: medium;
+    letter-spacing: 0.2em;
+}
+
+.hp-6em{
+    padding: 0 10%;
+}
+
+hr{
+    border-top: 1px solid #F29303;
+    margin: 3em 0;
+}
+
+.alliances-logos{
+    padding: 0 20%;
 }

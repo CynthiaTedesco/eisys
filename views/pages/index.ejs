@@ -43,23 +43,34 @@
         </div><!-- /.carousel -->
     </section><!--fin del slideshow-->
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-7">
-            <div class="text-center" role="alert">
-                compromiso
+<div class="">
+    <div class="row commitment">
+        <div class="col-sm-7 hp-6em">
+            <div role="alert">
+                <div class="title extra-bold"><%= commitment.title %></div>
+                <div class="paragraph"><%= commitment.text%></div>
             </div>
-            <hr class="visible-xs">
+            <hr>
             <div class="text-center" role="alert">
-                alianzas
+                <div class="title bold"><%= alliances %></div>
+                <div class="row alliances-logos">
+                    <div class="col-xs-12 col-md-5 alliance left">
+                        <img class="img-responsive" src="images/home/alianzas-oracle.png" alt="oracle_alliance_logo">
+                    </div>
+                    <div class="col-xs-12 col-md-5 alliance right">
+                        <img class="img-responsive" src="images/home/alianzas-witbor.png" alt="witbor_alliance_logo">
+                    </div>
+                </div>
             </div>
-
         </div>
-        <div class="text-center col-sm-5">
-            otros links
+        <div class="text-center col-sm-5 home-links">
+            <div>
+                <div class="know-us"><a href="/conocenos"><%=menu.know%></a></div>
+                <div class="contact-us"><a href="/contacto"><%=menu.contact%></a></div>
+            </div>
         </div>
     </div> <!--row-->
-    <div class="text-center">servicios</div>
+    <div class="text-center services">servicios</div>
     <div class="text-center">productos</div>
 </div>
 <% include ../partials/page-footer.ejs %>

@@ -39,4 +39,53 @@
 	.div-footer{
   		border-top: orange solid 1px;
 	}
+
+	div.commitment {
+		/*padding: 1em 0 1em 6em;*/
+	}
+
+	div.home-links{
+		margin-top: 0;
+		width:41.66666667%;
+	}
+
+	div.home-links>div{
+		padding: 12em 25%;
+	}
+
+	div.home-links>div>div {
+		margin: 1.5em 0;
+		padding: 10%;
+		border-radius: initial;
+	}
+
+	.alliances-logos{
+		padding: 0 1%;
+	}
+
+}
+
+@media screen and (min-width:980px){
+	div.home-links>div {
+		padding: 10.5em 25%;
+	}
+	.alliance{
+		margin: 0.5em;
+		padding: 1em 2em;
+	}
+}
+
+@media screen and (min-width:992px){
+	div.home-links>div {
+		padding: 7em 25%;
+	}
+	.alliance.left{
+		margin-left:auto;
+	}
+	.alliance.right{
+		margin-right:auto;
+	}
+	.alliances-logos{
+		display: inline-flex;
+	}
 }

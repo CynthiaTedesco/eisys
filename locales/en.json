@@ -1,6 +1,6 @@
 {
   "nav.home":"HOME",
-  "nav.know.us":"LET'S KNOW US",
+  "nav.know.us":"KNOW US",
   "nav.services":"SERVICES",
   "nav.contact.us":"CONTACT US",
 
@@ -9,5 +9,10 @@
   "caption3":"We provide a special, flexible, scalable, and high-quality solution that fits our clients' daily realities.",
   "caption4":"Eisys is a company formed by professionals that work with passion and effort.",
   "caption5":"Knowledge, continuous training and experience are our most valuable assets.",
-  "caption6":"We are the only company in Argentina that has experts with Oracle WebCenter certifications."
+  "caption6":"We are the only company in Argentina that has experts with Oracle WebCenter certifications.",
+
+  "commitment.title":"EISYS COMMITMENT (?)",
+  "commitment.text":"In Eisys, we consider that our clients' time is very important; therefore, we commit to meet all agreed deadlines so that the project adds value to the business when the clients need it.",
+
+  "business.alliances": "BUSINESS ALLIANCES"
 }
