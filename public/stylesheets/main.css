@@ -111,7 +111,7 @@ div.collapse.navbar-collapse{
   font-size: 1em;
   color: white;
 }
-.footer-div a:hover{
+a:hover{
   text-decoration: none;
   cursor: pointer;
 }
@@ -293,15 +293,18 @@ div.cont>div:nth-child(3){
     height: 100%;
 }
 
-.language-dropdown ul.language li a{
-    color:black;
-    display: block;
-    height: 100%;
-    padding: 0.8em 2em
+body .title, body .subtitle {
+    letter-spacing: 0.2em;
 }
 
-.language-dropdown ul.language li a:hover{
-    text-decoration: none;
+a {
+    color:black;
+    display: block;
+}
+
+.language-dropdown ul.language li a{
+    height: 100%;
+    padding: 0.8em 2em
 }
 
 .alliance{
@@ -317,6 +320,10 @@ div.cont>div:nth-child(3){
 
 div.home-services, div.home-products {
     background: #F6F8F9;
+}
+
+div.home-services{
+    padding-top: 5em;
 }
 
 div.home-links{
@@ -350,15 +357,8 @@ div.contact-us{
 
 div.know-us a, div.contact-us a{
     background: transparent;
-    color: black;
     font-family: raleway-bold;
     letter-spacing: 0.15em;
-    display: block;
-}
-
-div.know-us a:hover, div.contact-us a:hover{
-    text-decoration: none;
-    cursor: pointer;
 }
 
 div.commitment{
@@ -375,7 +375,6 @@ div.paragraph{
 div.title{
     margin-bottom: 1.5em;
     font-size: medium;
-    letter-spacing: 0.2em;
 }
 
 .hp-6em{
@@ -401,6 +400,11 @@ hr{
     overflow: hidden;
 }
 
+.home-products div:first-child div:first-child{
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
 .home-products>div>div{
     padding:3em;
 }
@@ -410,10 +414,9 @@ hr{
 }
 .home-products div.striked-title {
     display: inline-block;
-    padding: 2em 1em;
+    padding: 0 1em;
     position: relative;
     font-size: 25px;
-    letter-spacing: 0.2em;
 }
 
 .striked-title:before,
@@ -431,4 +434,21 @@ hr{
 }
 .striked-title:after {
     left: 100%;
+}
+
+.read-more{
+    background: transparent;
+    border: 1px solid;
+    width: 10em;
+    margin: 0 auto;
+}
+
+.read-more a{
+    padding: 1em;
+}
+
+.orange-text{
+    color: #F19100;
+    padding: 0 0 1.5em;
+    font-size: x-large;
 }
