@@ -353,6 +353,7 @@ div.know-us a, div.contact-us a{
     color: black;
     font-family: raleway-bold;
     letter-spacing: 0.15em;
+    display: block;
 }
 
 div.know-us a:hover, div.contact-us a:hover{

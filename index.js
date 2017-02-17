@@ -8,6 +8,7 @@ var i18n = require('i18n');
 var cookieParser = require('cookie-parser');
 var js = require('./public/js/scripts');
 var obj = {};
+var lang;
 
 i18n.configure({
     locales: ['en', 'es'],
@@ -28,12 +29,12 @@ app.set('views', __dirname + '/views');
 // change the rendering engine 
 app.set('view engine', 'ejs');
 
+var commons = {};
+
 // passing to express the template index.js to solve first page.
 app.get('/', function (request, response) {
-    var lang = js.resolveLanguage(request.cookies);
-    i18n.setLocale(request, lang);
-
-    response.render('pages/index', {
+    prepare(request);
+    response.render('pages/index', getLocals({
         slideshows: [
             {
                 divClass: 'item active',
@@ -72,40 +73,67 @@ app.get('/', function (request, response) {
                 caption: obj.__('caption6')
             }
         ],
-        menu: { home: obj.__('nav.home'),
-                know: obj.__('nav.know.us'),
-                services: obj.__('nav.services'),
-                contact: obj.__('nav.contact.us')},
-        dropDown: {selected: js.getSelectedLang(),
-                   nonSelected: js.getNonSelectedLang()},
         commitment: {title: obj.__('commitment.title'),
                      text: obj.__('commitment.text')},
         alliances: obj.__('business.alliances')
 
-    });
+    }));
 });
 
 // setting favicon
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.get('/conocenos', function (request, response) {
-    response.render('pages/conocenos', {title: 'CONOCENOS'});
+    prepare(request);
+    response.render('pages/conocenos', getLocals({title: 'CONOCENOS'}));
 });
 app.get('/contacto', function (request, response) {
-    response.render('pages/contacto', {title: 'CONTACTO'});
+    prepare(request);
+    response.render('pages/contacto', getLocals({title: 'CONTACTO'}));
 });
 app.get('/servicios', function (request, response) {
-    response.render('pages/servicios', {title: 'SERVICIOS'});
+    prepare(request);
+    response.render('pages/servicios', getLocals({title: 'SERVICIOS'}));
 });
 
-app.get('*/es', function (request, response, next) {
+app.get('*/es', function (request, response) {
     response.cookie('lang','es',{})
+    setLanguage({lang:'es'});
     response.redirect(request.get('referer'));
 });
-app.get('*/en', function (request, response, next) {
+app.get('*/en', function (request, response) {
     response.cookie('lang','en',{})
+    setLanguage({lang:'en'});
     response.redirect(request.get('referer'));
 });
+
+/* ------- LANGUAGE ------------*/
+//adds commons to locals
+var getLocals = function(locals){
+    locals.menu = commons.menu;
+    locals.dropDown = commons.dropDown;
+
+    return locals;
+}
+//resolves language
+var setLanguage = function(cookies){
+    lang = js.resolveLanguage(cookies);
+}
+//sets lang var and common locals
+var prepare = function(request){
+    //checks if lang var is set. If not, it resolves it
+    if (!lang){
+        setLanguage(request.cookies);
+    }
+    i18n.setLocale(request, lang);
+    commons = {menu: { home: obj.__('nav.home'),
+                        know: obj.__('nav.know.us'),
+                        services: obj.__('nav.services'),
+                        contact: obj.__('nav.contact.us')},
+                dropDown: {selected: js.getSelectedLang(),
+                        nonSelected: js.getNonSelectedLang()}};
+}
+/* ----------------------------*/
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
