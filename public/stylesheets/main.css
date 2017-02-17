@@ -398,6 +398,7 @@ hr{
 .home-products>div {
     display: block;
     overflow: hidden;
+    padding-right: 0;
 }
 
 .home-products div:first-child div:first-child{
@@ -411,6 +412,7 @@ hr{
 
 .home-products>div img{
     display: initial;
+    max-width: 70%;
 }
 .home-products div.striked-title {
     display: inline-block;

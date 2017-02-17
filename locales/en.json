@@ -17,5 +17,9 @@
   "business.alliances":"BUSINESS ALLIANCES",
   "content.management":"EISYS CONTENT MANAGEMENT",
   "read.more": "READ MORE",
-  "products": "PRODUCTS"
+  "products": "PRODUCTS",
+  "content":"ORACLE WEBCENTER CONTENT",
+  "portal":"ORACLE WEBCENTER PORTAL",
+  "sites":"ORACLE WEBCENTER SITES",
+  "cloud":"ORACLE DOCUMENTS CLOUD"
 }

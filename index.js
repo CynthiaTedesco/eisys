@@ -83,7 +83,11 @@ app.get('/', function (request, response) {
         alliances: obj.__('business.alliances'),
         contentManagement: obj.__('content.management'),
         readMore: obj.__('read.more'),
-        products: obj.__('products')
+        products: obj.__('products'),
+        content: obj.__('content'),
+        portal: obj.__('portal'),
+        sites: obj.__('sites'),
+        cloud: obj.__('cloud')
     }));
 });
 
