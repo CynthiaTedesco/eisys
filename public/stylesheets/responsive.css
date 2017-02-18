@@ -34,6 +34,7 @@
 		background: url("../images/footer/bk-social.jpg") no-repeat;  
 		padding: 4em 4em 0;
     	border-left: 1px solid orange;
+		margin:initial;
 	}
 
 	.div-footer{
@@ -63,6 +64,17 @@
 		padding: 0 1%;
 	}
 
+    /*div.li-profile-container.company {*/
+        /*width: 100%!important;*/
+    /*}*/
+
+    /*div.wrapper>div.container-outer {*/
+        /*width: 93.5%;*/
+    /*}*/
+
+    /*.framed #body .wrapper {*/
+        /*width:200px;*/
+    /*}*/
 }
 
 @media screen and (min-width:980px){

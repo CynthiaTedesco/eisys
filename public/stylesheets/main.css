@@ -86,6 +86,10 @@ div.collapse.navbar-collapse{
   margin-right: 0;
   margin-left: 0;
 }
+.footer-div{
+    position: relative;
+    height: 4em;
+}
 
 .footer {
   background: url("../images/footer/bk-datos.jpg") no-repeat;
@@ -101,16 +105,22 @@ div.collapse.navbar-collapse{
 }
 
 .footer-div>a, .footer-div>span {
-  margin: 0.5em 1em 0;
-  width: 60%;
-  border-bottom: 1px solid white;
-  padding-bottom: 0.7em;
-  font-size: initial;
+    margin: 0.5em 1em 0;
+    width: 60%;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.7em;
+    font-size: initial;
+    position: absolute;
+    left: 40px;
 }
 .footer-div a span{
   font-size: 1em;
   color: white;
 }
+.footer-social{
+    margin: 1em 15px 1em -15px;
+}
+
 a:hover{
   text-decoration: none;
   cursor: pointer;
@@ -160,9 +170,9 @@ div.slideshow.jumbotron{
 
 .footer-div>img{
   max-height: 34px;
+    position: absolute;
+    left: 0;
 }
-
-
 
 span{
   float:left;  
