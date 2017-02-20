@@ -1,4 +1,8 @@
 @media screen and (min-width:768px){
+
+    div.collapse.navbar-collapse {
+        background: transparent;
+    }
 	a.navbar-brand img {
 	  	position: absolute;
     	bottom: 0;
@@ -19,9 +23,10 @@
 
 	.navbar-nav>li {
 	    margin-left: 1em;
+        border-bottom: none;
 	}
 
-	.navbar div.container-fluid{
+    .navbar div.container-fluid {
 		height: 6em
 	}
 
