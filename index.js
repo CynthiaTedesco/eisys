@@ -94,17 +94,47 @@ app.get('/', function (request, response) {
 app.get('/conocenos', function (request, response) {
     response.render('pages/conocenos', getLocals({title: 'CONOCENOS'}));
 });
-app.get('/conocenos/:section', function (request, response) {
-    console.log(request.params.section);
+app.get('/conocenos/acerca', function (request, response) {
     response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-                                                  showSections:{
-                                                    about: request.params.section === 'ACERCA',
-                                                    philosophy: request.params.section === 'FILOSOFIA',
-                                                    background: request.params.section === 'TRAYECTORIA',
-                                                    work: request.params.section === 'TRABAJO',
-                                                    allies: request.params.section === 'ALIADOS'
-                                                  }}));
+                                                    showSections:{
+                                                        about:true
+                                                    }}));
 });
+app.get('/conocenos/filosofia', function (request, response) {
+    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
+        showSections:{
+            philosophy:true
+        }}));
+});
+app.get('/conocenos/trayectoria', function (request, response) {
+    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
+        showSections:{
+            background:true
+        }}));
+});
+app.get('/conocenos/trabajo', function (request, response) {
+    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
+        showSections:{
+            working:true
+        }}));
+});
+app.get('/conocenos/alianzas', function (request, response) {
+    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
+        showSections:{
+            allies:true
+        }}));
+});
+// app.get('/conocenos/:section', function (request, response) {
+//     console.log(request.params.section);
+//     response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
+//                                                   showSections:{
+//                                                     about: request.params.section === 'ACERCA',
+//                                                     philosophy: request.params.section === 'FILOSOFIA',
+//                                                     background: request.params.section === 'TRAYECTORIA',
+//                                                     work: request.params.section === 'TRABAJO',
+//                                                     allies: request.params.section === 'ALIADOS'
+//                                                   }}));
+// });
 
 app.get('/contacto', function (request, response) {
     response.render('pages/contacto', getLocals({title: 'CONTACTO'}));
@@ -147,7 +177,7 @@ var prepare = function(request){
                         know: obj.__('nav.know.us'),
                         know_about: obj.__('nav.know.us.about'),
                         know_philosophy: obj.__('nav.know.us.philosophy'),
-                        know_background: obj.__('nav.know.us.background'),
+                            know_background: obj.__('nav.know.us.background'),
                         know_working: obj.__('nav.know.us.working'),
                         know_allies: obj.__('nav.know.us.allies'),
                         services: obj.__('nav.services'),
