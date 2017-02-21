@@ -2,21 +2,28 @@
 var express = require('express');
 var favicon = require('serve-favicon');
 var path = require("path");
-var i18n = require('i18n');
+const routes = require('./routes');
 
+var i18n = require('i18n');
 var cookieParser = require('cookie-parser');
 var js = require('./public/js/scripts');
 var obj = {};
-var lang;
 
+var lang;
 i18n.configure({
     locales: ['en', 'es'],
     register: obj,
     directory: __dirname + '/locales'
 });
+console.log(obj.__('nav.services'));
+js.setTranslator(i18n);
 
+js.setObj(obj);
 var app = express();
+
 app.use(cookieParser());
+//  Connect all our routes to our application
+app.use('/', routes);
 app.use(i18n.init);
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
@@ -27,165 +34,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 // setting favicon
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
-var commons = {};
-
-// passing to express the template index.js to solve first page.
-app.get('/*', function (request, response, next) {
-    //it prevents double preparation if request comes from language change
-    if (js.getLanguages().indexOf(request.url.replace('/','')) < 0){
-        prepare(request);
-    }
-    next();
-});
-app.get('/', function (request, response) {
-    response.render('pages/index', getLocals({
-        slideshows: [
-            {
-                divClass: 'item active',
-                imgSrc: 'images/slideshow/slide01.jpg',
-                imgAlt: 'first slide',
-                caption: obj.__('caption1')
-            },
-            {
-                divClass: 'item',
-                imgSrc: 'images/slideshow/slide02.jpg',
-                imgAlt: 'second slide',
-                caption: obj.__('caption2')
-            },
-            {
-                divClass: 'item',
-                imgSrc: 'images/slideshow/slide03.jpg',
-                imgAlt: 'third slide',
-                caption: obj.__('caption3')
-            },
-            {
-                divClass: 'item',
-                imgSrc: 'images/slideshow/slide04.jpg',
-                imgAlt: 'fourth slide',
-                caption: obj.__('caption4')
-            },
-            {
-                divClass: 'item',
-                imgSrc: 'images/slideshow/slide05.jpg',
-                imgAlt: 'fifth slide',
-                caption: obj.__('caption5')
-            },
-            {
-                divClass: 'item',
-                imgSrc: 'images/slideshow/slide06.jpg',
-                imgAlt: 'sixth slide',
-                caption: obj.__('caption6')
-            }
-        ],
-        commitment: {title: obj.__('commitment.title'),
-                     text: obj.__('commitment.text')},
-        alliances: obj.__('business.alliances'),
-        contentManagement: obj.__('content.management'),
-        readMore: obj.__('read.more'),
-        products: obj.__('products'),
-        content: obj.__('content'),
-        portal: obj.__('portal'),
-        sites: obj.__('sites'),
-        cloud: obj.__('cloud')
-    }));
-});
-
-app.get('/conocenos', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: 'CONOCENOS'}));
-});
-app.get('/conocenos/acerca', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-                                                    showSections:{
-                                                        about:true
-                                                    }}));
-});
-app.get('/conocenos/filosofia', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-        showSections:{
-            philosophy:true
-        }}));
-});
-app.get('/conocenos/trayectoria', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-        showSections:{
-            background:true
-        }}));
-});
-app.get('/conocenos/trabajo', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-        showSections:{
-            working:true
-        }}));
-});
-app.get('/conocenos/alianzas', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-        showSections:{
-            allies:true
-        }}));
-});
-// app.get('/conocenos/:section', function (request, response) {
-//     console.log(request.params.section);
-//     response.render('pages/conocenos', getLocals({title: obj.__('nav.know.us'),
-//                                                   showSections:{
-//                                                     about: request.params.section === 'ACERCA',
-//                                                     philosophy: request.params.section === 'FILOSOFIA',
-//                                                     background: request.params.section === 'TRAYECTORIA',
-//                                                     work: request.params.section === 'TRABAJO',
-//                                                     allies: request.params.section === 'ALIADOS'
-//                                                   }}));
-// });
-
-app.get('/contacto', function (request, response) {
-    response.render('pages/contacto', getLocals({title: 'CONTACTO'}));
-});
-app.get('/servicios', function (request, response) {
-    response.render('pages/servicios', getLocals({title: 'SERVICIOS'}));
-});
-
-app.get('*/es', function (request, response) {
-    response.cookie('lang','es',{})
-    setLanguage({lang:'es'});
-    response.redirect(request.get('referer'));
-});
-app.get('*/en', function (request, response) {
-    response.cookie('lang','en',{})
-    setLanguage({lang:'en'});
-    response.redirect(request.get('referer'));
-});
-
-/* ------- LANGUAGE ------------*/
-//adds commons to locals
-var getLocals = function(locals){
-    locals.menu = commons.menu;
-    locals.dropDown = commons.dropDown;
-
-    return locals;
-}
-//resolves language
-var setLanguage = function(cookies){
-    lang = js.resolveLanguage(cookies);
-}
-//sets lang var and common locals
-var prepare = function(request){
-    //checks if lang var is set. If not, it resolves it
-    if (!lang){
-        setLanguage(request.cookies);
-    }
-    i18n.setLocale(request, lang);
-    commons = {menu: { home: obj.__('nav.home'),
-                        know: obj.__('nav.know.us'),
-                        know_about: obj.__('nav.know.us.about'),
-                        know_philosophy: obj.__('nav.know.us.philosophy'),
-                            know_background: obj.__('nav.know.us.background'),
-                        know_working: obj.__('nav.know.us.working'),
-                        know_allies: obj.__('nav.know.us.allies'),
-                        services: obj.__('nav.services'),
-                        contact: obj.__('nav.contact.us')},
-                dropDown: {selected: js.getSelectedLang(),
-                        nonSelected: js.getNonSelectedLang()}};
-}
-/* ----------------------------*/
 
 app.listen(app.get('port'), function () {
     console.log('Node app is running on port', app.get('port'));
