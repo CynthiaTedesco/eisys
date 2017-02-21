@@ -147,12 +147,12 @@ var getLocals = function(locals){
 routes.get('*/es', function (request, response) {
     response.cookie('lang','es',{});
     setLanguage({cookies: {lang:'es'}});
-    response.redirect(request.url.replace('es', ''));
+    response.redirect(request.get('referer') ? request.get('referer') : '/');
 });
 routes.get('*/en', function (request, response) {
     response.cookie('lang','en',{});
     setLanguage({cookies:{lang:'en'}});
-    response.redirect(request.url.replace('en', ''));
+    response.redirect(request.get('referer') ? request.get('referer') : '/');
 });
 
 
