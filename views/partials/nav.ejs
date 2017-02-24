@@ -16,15 +16,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="/"><%= menu.home %><span class="sr-only">(current)</span></a></li>
-        <li><a href="/conocenos"><%= menu.know %></a></li>
-        <li><a href="/servicios"><%= menu.services %></a></li>
-        <li><a href="/contacto"><%= menu.contact %></a></li>
-        <li class="visible-xs"><a href="/conocenos/acerca"><%= menu.know_about %></a></li>
-        <li class="visible-xs"><a href="/conocenos/filosofia"><%= menu.know_philosophy %></a></li>
-        <li class="visible-xs"><a href="/conocenos/trayectoria"><%= menu.know_background %></a></li>
-        <li class="visible-xs"><a href="/conocenos/trabajo"><%= menu.know_working %></a></li>
-        <li class="visible-xs"><a href="/conocenos/aliados"><%= menu.know_allies %></a></li>
+        <li class="<%=menu.home.class%>"><a href="/"><%= menu.home.label %><span class="sr-only">(current)</span></a></li>
+        <li class="<%=menu.know.class%>"><a href="/conocenos"><%= menu.know.label %></a></li>
+        <li class="<%=menu.services.class%>"><a href="/servicios"><%= menu.services.label %></a></li>
+        <li class="<%=menu.contact.class%>"><a href="/contacto"><%= menu.contact.label %></a></li>
+        <li class="visible-xs <%=menu.know_about.class%>"><a href="/conocenos/acerca"><%= menu.know_about.label %></a></li>
+        <li class="visible-xs <%=menu.know_philosophy.class%>"><a href="/conocenos/filosofia"><%= menu.know_philosophy.label %></a></li>
+        <li class="visible-xs <%=menu.know_background.class%>"><a href="/conocenos/trayectoria"><%= menu.know_background.label %></a></li>
+        <li class="visible-xs <%=menu.know_working.class%>"><a href="/conocenos/trabajo"><%= menu.know_working.label  %></a></li>
+        <li class="visible-xs <%=menu.know_allies.class%>"><a href="/conocenos/aliados"><%= menu.know_allies.label %></a></li>
         <!--<li class="cont">-->
   <!--<div>-->
     <!--<span class="a"></span>-->

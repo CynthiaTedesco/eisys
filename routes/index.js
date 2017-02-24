@@ -5,9 +5,9 @@ const routes = require('express').Router();
 var js = require('../public/js/scripts');
 var lang;
 
-routes.get('/*', function(request, response, next){
+routes.get('/*', function (request, response, next) {
     //it prevents double preparation if request comes from language change
-    if (js.validRoute(request.url) && js.getLanguages().indexOf(request.url.replace('/','')) < 0){
+    if (js.validRoute(request.url) && js.getLanguages().indexOf(request.url.replace('/', '')) < 0) {
         console.log('calling preparation from /*');
         console.log(request.url);
         prepare(request);
@@ -15,7 +15,7 @@ routes.get('/*', function(request, response, next){
     next();
 });
 routes.get('/', function (request, response) {
-    response.render('pages/index', js.getLocals({
+    var locals = js.getLocals({
         slideshows: [
             {
                 divClass: 'item active',
@@ -54,8 +54,10 @@ routes.get('/', function (request, response) {
                 caption: js.getObj().__('caption6')
             }
         ],
-        commitment: {title: js.getObj().__('commitment.title'),
-            text: js.getObj().__('commitment.text')},
+        commitment: {
+            title: js.getObj().__('commitment.title'),
+            text: js.getObj().__('commitment.text')
+        },
         alliances: js.getObj().__('business.alliances'),
         contentManagement: js.getObj().__('content.management'),
         readMore: js.getObj().__('read.more'),
@@ -64,37 +66,44 @@ routes.get('/', function (request, response) {
         portal: js.getObj().__('portal'),
         sites: js.getObj().__('sites'),
         cloud: js.getObj().__('cloud')
-    }));
+    });
+
+    locals.menu.home.class = 'active';
+    response.render('pages/index', locals);
 });
 
 routes.get('/contacto', function (request, response) {
-    response.render('pages/contacto', js.getLocals({title: 'CONTACTO'}));
+    var locals = js.getLocals({title: 'CONTACTO'});
+    locals.menu.contact.class = "active";
+    response.render('pages/contacto', locals);
 });
 routes.get('/servicios', function (request, response) {
-    response.render('pages/servicios', js.getLocals({title: 'SERVICIOS'}));
+    var locals = js.getLocals({title: 'SERVICIOS'});
+    locals.menu.services.class = "active";
+    response.render('pages/servicios', locals);
 });
 
 //resolves language
-var setLanguage = function(request){
+var setLanguage = function (request) {
     lang = js.resolveLanguage(request);
 }
 //sets lang var and common locals
-var prepare = function(request){
+var prepare = function (request) {
     //checks if lang var is set. If not, it resolves it
-    if (!lang){
+    if (!lang) {
         setLanguage(request);
     }
     js.setLabels(request, lang);
 }
 
 routes.get('*/es', function (request, response) {
-    response.cookie('lang','es',{});
-    setLanguage({cookies: {lang:'es'}});
+    response.cookie('lang', 'es', {});
+    setLanguage({cookies: {lang: 'es'}});
     response.redirect(request.get('referer') ? request.get('referer') : '/');
 });
 routes.get('*/en', function (request, response) {
-    response.cookie('lang','en',{});
-    setLanguage({cookies:{lang:'en'}});
+    response.cookie('lang', 'en', {});
+    setLanguage({cookies: {lang: 'en'}});
     response.redirect(request.get('referer') ? request.get('referer') : '/');
 });
 

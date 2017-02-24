@@ -77,15 +77,17 @@ exports.getLocals = function(locals){
 exports.setLabels = function(request, lang){
     this.getTranslator().setLocale(request, lang);
 
-    commons = {menu: { home: obj.__('nav.home'),
-        know: obj.__('nav.know.us'),
-        know_about: obj.__('nav.know.us.about'),
-        know_philosophy: obj.__('nav.know.us.philosophy'),
-        know_background: obj.__('nav.know.us.background'),
-        know_working: obj.__('nav.know.us.working'),
-        know_allies: obj.__('nav.know.us.allies'),
-        services: obj.__('nav.services'),
-        contact: obj.__('nav.contact.us')},
+    commons = {menu: {
+                home: {label: obj.__('nav.home'), class: ''},
+                know: {label: obj.__('nav.know.us'), class: ''},
+                know_about: {label: obj.__('nav.know.us.about'), class: ''},
+                know_philosophy: {label: obj.__('nav.know.us.philosophy'), class: ''},
+                know_background: {label: obj.__('nav.know.us.background'), class: ''},
+                know_working: {label: obj.__('nav.know.us.working'), class: ''},
+                know_allies: {label: obj.__('nav.know.us.allies'), class: ''},
+                services: {label: obj.__('nav.services'), class: ''},
+                contact: {label: obj.__('nav.contact.us'), class: ''}
+            },
         dropDown: {selected: this.getSelectedLang(),
             nonSelected: this.getNonSelectedLang()}};
 }
