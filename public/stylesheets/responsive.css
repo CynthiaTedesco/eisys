@@ -8,18 +8,35 @@
     	bottom: 0;
 	}
 
-	.navbar-default .navbar-nav>.active>a{
+	.main.navbar-default .navbar-nav>.active>a{
 		color: white;
     	background-color: #0A3A4A;
 	}
 
-	.navbar-default .navbar-nav>li>a{
-		/*border-radius: 2em;*/
+    .know.navbar-default .navbar-nav>.active>a{
+        border-radius: 2em;
+        color: white;
+        background-color: #F19200;
+        height:auto;
+    }
+
+	.main.navbar-default .navbar-nav>li>a{
     	padding-bottom: 0.5em;
     	padding-top: 0.5em;
-    	    margin: auto;
-    	/*border: solid 2px #0A3A4A;*/
+        margin: auto;
 	}
+
+    .know.navbar-default .navbar-nav>li.active>a:after{
+        content: url(../images/conocenos/menu-arrow.png);
+        display: block;
+        position: absolute;
+        right: 1.5em;
+        top: 35%;
+    }
+    .know.navbar-default .navbar-nav>li>a{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
 	.navbar-nav>li {
 	    margin-left: 1em;

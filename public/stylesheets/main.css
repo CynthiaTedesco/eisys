@@ -83,6 +83,7 @@ div.collapse.navbar-collapse {
     border-bottom: 2px solid #0A3A4A;
     height: 4em
 }
+
 .know.navbar div.container-fluid {
     border-bottom: none;
 }
@@ -153,7 +154,7 @@ a:hover {
     margin: 1em 0;
 }
 
-#myCarousel{
+#myCarousel {
     z-index: 0;
 }
 
@@ -322,12 +323,16 @@ div.cont > div:nth-child(3) {
     font-weight: 600;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+.main.navbar-default .navbar-nav > .active > a,
+.main.navbar-default .navbar-nav > .active > a:focus,
+.main.navbar-default .navbar-nav > .active > a:hover {
     background: #0B3A4A;
     color: white;
 }
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+.main.navbar-default .navbar-nav > li > a,
+.main.navbar-default .navbar-nav > li > a:focus,
+.main.navbar-default .navbar-nav > li > a:hover {
     color: #A2BCCB;
 }
 
@@ -543,6 +548,19 @@ div.banner > div.title {
     background-image: url("../images/conocenos/bk.jpg");
 }
 
+.know .navbar-nav > li {
+    border: 1px solid #0A3C46;
+    width: 18em;
+    margin-bottom: 2em;
+    height: auto;
+    border-radius: 2em;
+    background: #3B5D7C;
+    opacity: 0.7;
+}
+.know .navbar-nav > li.active{
+    border: none;
+    opacity:1;
+}
 /*-------- SERVICIOS --------- */
 .banner.servicios {
     background-image: url("../images/servicios/bk.jpg");
