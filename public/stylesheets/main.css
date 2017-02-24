@@ -83,6 +83,9 @@ div.collapse.navbar-collapse {
     border-bottom: 2px solid #0A3A4A;
     height: 4em
 }
+.know.navbar div.container-fluid {
+    border-bottom: none;
+}
 
 .m-t-7em {
     margin-top: 7em;
@@ -522,7 +525,7 @@ hr {
 }
 
 .banner {
-    height: 30em;
+    height: 100em;
     background-repeat: round;
     margin-top: -7em;
     text-align: center;

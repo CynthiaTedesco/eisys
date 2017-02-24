@@ -9,19 +9,16 @@ var conocenosRouter = express.Router();
 conocenosRouter.route('/').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        showSections: {
-            about: true
-        }
+        subsection: '../pages/acerca.ejs'
     });
     locals.menu.know.class = 'active';
+    locals.menu.know_about.class = 'active';
     response.render('pages/conocenos', locals);
 })
 conocenosRouter.route('/acerca').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        showSections: {
-            about: true
-        }
+        subsection: '../pages/acerca.ejs'
     });
     locals.menu.know.class = 'active';
     locals.menu.know_about.class = 'active';
@@ -30,9 +27,7 @@ conocenosRouter.route('/acerca').get(function (request, response, next) {
 conocenosRouter.route('/filosofia').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        showSections: {
-            philosophy: true
-        }
+        subsection: '../pages/filosofia.ejs'
     })
     locals.menu.know.class = 'active';
     locals.menu.know_philosophy.class = 'active';
@@ -41,9 +36,7 @@ conocenosRouter.route('/filosofia').get(function (request, response, next) {
 conocenosRouter.route('/trayectoria').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        showSections: {
-            background: true
-        }
+        subsection: '../pages/trayectoria.ejs'
     });
     locals.menu.know.class = 'active';
     locals.menu.know_background.class = 'active';
@@ -52,9 +45,7 @@ conocenosRouter.route('/trayectoria').get(function (request, response, next) {
 conocenosRouter.route('/trabajo').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        showSections: {
-            working: true
-        }
+        subsection: '../pages/trabajo.ejs'
     });
     locals.menu.know.class = 'active';
     locals.menu.know_working.class = 'active';
@@ -63,9 +54,7 @@ conocenosRouter.route('/trabajo').get(function (request, response, next) {
 conocenosRouter.route('/alianzas').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        showSections: {
-            allies: true
-        }
+        subsection: '../pages/alianzas.ejs'
     });
     locals.menu.know.class = 'active';
     locals.menu.know_allies.class = 'active';
