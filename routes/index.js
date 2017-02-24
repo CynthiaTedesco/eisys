@@ -4,8 +4,6 @@
 const routes = require('express').Router();
 var js = require('../public/js/scripts');
 var lang;
-var commons = {};
-// var obj = {};
 
 routes.get('/*', function(request, response, next){
     //it prevents double preparation if request comes from language change
@@ -17,7 +15,7 @@ routes.get('/*', function(request, response, next){
     next();
 });
 routes.get('/', function (request, response) {
-    response.render('pages/index', getLocals({
+    response.render('pages/index', js.getLocals({
         slideshows: [
             {
                 divClass: 'item active',
@@ -69,48 +67,11 @@ routes.get('/', function (request, response) {
     }));
 });
 
-routes.get('/conocenos', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: js.getObj().__('nav.know.us'),
-        showSections:{
-            about:true
-        }}));
-});
-routes.get('/conocenos/acerca', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: js.getObj().__('nav.know.us'),
-        showSections:{
-            about:true
-        }}));
-});
-routes.get('/conocenos/filosofia', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: js.getObj().__('nav.know.us'),
-        showSections:{
-            philosophy:true
-        }}));
-});
-routes.get('/conocenos/trayectoria', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: js.getObj().__('nav.know.us'),
-        showSections:{
-            background:true
-        }}));
-});
-routes.get('/conocenos/trabajo', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: js.getObj().__('nav.know.us'),
-        showSections:{
-            working:true
-        }}));
-});
-routes.get('/conocenos/alianzas', function (request, response) {
-    response.render('pages/conocenos', getLocals({title: js.getObj().__('nav.know.us'),
-        showSections:{
-            allies:true
-        }}));
-});
-
 routes.get('/contacto', function (request, response) {
-    response.render('pages/contacto', getLocals({title: 'CONTACTO'}));
+    response.render('pages/contacto', js.getLocals({title: 'CONTACTO'}));
 });
 routes.get('/servicios', function (request, response) {
-    response.render('pages/servicios', getLocals({title: 'SERVICIOS'}));
+    response.render('pages/servicios', js.getLocals({title: 'SERVICIOS'}));
 });
 
 //resolves language
@@ -123,25 +84,7 @@ var prepare = function(request){
     if (!lang){
         setLanguage(request);
     }
-    js.getTranslator().setLocale(request, lang);
-    commons = {menu: { home: js.getObj().__('nav.home'),
-        know: js.getObj().__('nav.know.us'),
-        know_about: js.getObj().__('nav.know.us.about'),
-        know_philosophy: js.getObj().__('nav.know.us.philosophy'),
-        know_background: js.getObj().__('nav.know.us.background'),
-        know_working: js.getObj().__('nav.know.us.working'),
-        know_allies: js.getObj().__('nav.know.us.allies'),
-        services: js.getObj().__('nav.services'),
-        contact: js.getObj().__('nav.contact.us')},
-        dropDown: {selected: js.getSelectedLang(),
-            nonSelected: js.getNonSelectedLang()}};
-}
-//adds commons to locals
-var getLocals = function(locals){
-    locals.menu = commons.menu;
-    locals.dropDown = commons.dropDown;
-
-    return locals;
+    js.setLabels(request, lang);
 }
 
 routes.get('*/es', function (request, response) {
@@ -155,6 +98,4 @@ routes.get('*/en', function (request, response) {
     response.redirect(request.get('referer') ? request.get('referer') : '/');
 });
 
-
 module.exports = routes;
-

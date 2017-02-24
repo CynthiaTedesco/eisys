@@ -6,6 +6,7 @@ var exports = module.exports = {};
 
 var i18n;
 var obj = {};
+var commons = {};
 var defaultLang = 'es';
 var spanishObj = {
     name: 'es',
@@ -64,6 +65,29 @@ exports.resolveLanguage = function(request) {
         nonSelectedLang = englishObj;
         return defaultLang;
     }
+}
+
+exports.getLocals = function(locals){
+    locals.menu = commons.menu;
+    locals.dropDown = commons.dropDown;
+
+    return locals;
+}
+
+exports.setLabels = function(request, lang){
+    this.getTranslator().setLocale(request, lang);
+
+    commons = {menu: { home: obj.__('nav.home'),
+        know: obj.__('nav.know.us'),
+        know_about: obj.__('nav.know.us.about'),
+        know_philosophy: obj.__('nav.know.us.philosophy'),
+        know_background: obj.__('nav.know.us.background'),
+        know_working: obj.__('nav.know.us.working'),
+        know_allies: obj.__('nav.know.us.allies'),
+        services: obj.__('nav.services'),
+        contact: obj.__('nav.contact.us')},
+        dropDown: {selected: this.getSelectedLang(),
+            nonSelected: this.getNonSelectedLang()}};
 }
 
 module.exports = exports;

@@ -3,6 +3,7 @@ var express = require('express');
 var favicon = require('serve-favicon');
 var path = require("path");
 const routes = require('./routes');
+var conocenosRouter = require('./routes/conocenosRouter');
 
 var i18n = require('i18n');
 var cookieParser = require('cookie-parser');
@@ -24,6 +25,8 @@ var app = express();
 app.use(cookieParser());
 //  Connect all our routes to our application
 app.use('/', routes);
+app.use('/conocenos', conocenosRouter.router());
+
 app.use(i18n.init);
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
