@@ -74,6 +74,19 @@ exports.getLocals = function(locals){
     return locals;
 }
 
+exports.getAboutLocals = function(){
+    return {
+        title: obj.__('about.title'),
+        paragraph1: obj.__('about.paragraph1'),
+        paragraph2: obj.__('about.paragraph2'),
+        paragraph3: obj.__('about.paragraph3'),
+        paragraph4: obj.__('about.paragraph4'),
+        welcome: obj.__('about.welcome'),
+        director_name: obj.__('about.director.name'),
+        director: obj.__('about.director')
+    }
+}
+
 exports.setLabels = function(request, lang){
     this.getTranslator().setLocale(request, lang);
 

@@ -444,7 +444,7 @@ div.paragraph {
 }
 
 div.title {
-    margin-bottom: 1.5em;
+    margin-bottom: 3em;
     font-size: medium;
 }
 
@@ -530,8 +530,8 @@ hr {
 }
 
 .banner {
-    height: 100em;
-    background-repeat: round;
+    height: 50%;
+    background-repeat: inherit;
     margin-top: -7em;
     text-align: center;
 }
@@ -557,9 +557,44 @@ div.banner > div.title {
     background: #3B5D7C;
     opacity: 0.7;
 }
-.know .navbar-nav > li.active{
+
+.know .navbar-nav > li.active {
     border: none;
-    opacity:1;
+    opacity: 1;
+}
+div.section>div.title {
+    background: white;
+    vertical-align: middle;
+    padding: 1em;
+    font-size: x-large;
+    text-align: left;
+    color: #FA9B2B;
+    margin: 0 -15px 1em;
+}
+div.section{
+    background: #F7F8FA;
+    padding-bottom: 4em;
+    border-bottom: 1px solid #F49102;
+}
+div.paragraphs{
+    padding:10px;
+}
+
+div.section div.paragraph{
+    margin-bottom: 2em;
+}
+div.signature{
+    padding:0;
+}
+
+div.signature > div.signature, div.welcome {
+    text-align: left;
+}
+div.welcome{
+    margin-bottom: 2em;
+}
+div.photo {
+    margin-bottom: 2em;
 }
 /*-------- SERVICIOS --------- */
 .banner.servicios {

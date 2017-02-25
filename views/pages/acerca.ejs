@@ -1,13 +1,24 @@
-<div class="row">
+<div>
     <div class="col-sm-3 hidden-xs">
         <% include ../partials/know.nav.ejs %>
     </div>
-    <div class="col-sm-7">
-        <div>acerca de</div>
-        <hr>
-        <div class="row">
-            <div class="col-sm-5">fotito</div>
-            <div class="col-sm-7">firma</div>
+    <div class="section col-sm-7">
+        <div class="title light"><%= section.title %></div>
+        <hr class="hidden-xs">
+        <div class="paragraphs">
+            <div class="paragraph"><%- section.paragraph1%></div>
+            <div class="paragraph"><%= section.paragraph2%></div>
+            <div class="paragraph"><%= section.paragraph3%></div>
+            <hr class="visible-xs">
+            <div class="photo col-sm-5">
+                <img src="../images/conocenos/francisco.png" alt="francisco">
+            </div>
+            <div class="col-sm-7 signature">
+                <div class="paragraph"><%= section.paragraph4%></div>
+                <div class="welcome bold"><%= section.welcome%></div>
+                <div class="signature"><i><%= section.director_name %></i></div>
+                <div class="signature"><i><%= section.director %></i></div>
+            </div>
         </div>
     </div>
 </div>
