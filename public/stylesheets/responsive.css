@@ -20,7 +20,7 @@
 
     a.navbar-brand img {
         position: absolute;
-        bottom: 0;
+        top: 0;
     }
 
     .main.navbar-default .navbar-nav > .active > a {
@@ -103,7 +103,7 @@
     }
 
     .banner {
-        height: 100em;
+        height: 85em;
     }
 
     div.content {
@@ -111,13 +111,27 @@
     }
 
     div.content div.menu {
-        position: absolute;
-        left: 0;
+        /*position: absolute;*/
+        /*left: 0;*/
+    }
+
+    nav.know.navbar.navbar-default {
+        font-size: x-small;
+        margin-top: auto;
+    }
+
+    div.section>div.title{
+        width:80%;
+    }
+
+    div.paragraphs>div.signature {
+        padding-left: 3em;
     }
 
     div.content div.section {
-        position: absolute;
-        right: 5%;
+        border:none;
+        /*position: absolute;*/
+        /*right: 5%;*/
     }
 
     div.content nav. navbar {
@@ -125,9 +139,35 @@
     }
 }
 
+@media screen and (min-width: 900px) {
+
+    div.section>div.title{
+        width:70%;
+    }
+
+    nav.know.navbar.navbar-default {
+        font-size: smaller;
+        margin-top: 5%;
+        width: initial;
+    }
+    .know > .navbar-right{
+        margin-right:0;
+    }
+    div.content div.section {
+        /*right:1em;*/
+    }
+}
+
 @media screen and (min-width: 980px) {
     div.home-links > div {
         padding: 10.5em 25%;
+    }
+    nav.know.navbar.navbar-default {
+        font-size: inherit;
+    }
+
+    .banner {
+        height: 80em;
     }
 
     .alliance {

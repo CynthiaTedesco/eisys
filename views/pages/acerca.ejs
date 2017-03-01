@@ -1,15 +1,14 @@
 <div class="content">
-    <div class="col-sm-4 hidden-xs menu">
+    <div class="col-sm-4 col-lg-3 hidden-xs menu">
         <% include ../partials/know.nav.ejs %>
     </div>
-    <div class="section col-sm-8">
+    <div class="section col-sm-7 col-lg-8">
         <div class="title light"><%= section.title %></div>
-        <hr class="hidden-xs">
         <div class="paragraphs">
             <div class="paragraph"><%- section.paragraph1%></div>
             <div class="paragraph"><%= section.paragraph2%></div>
             <div class="paragraph"><%= section.paragraph3%></div>
-            <hr class="visible-xs">
+            <hr>
             <div class="photo col-sm-5">
                 <img src="../images/conocenos/francisco.png" alt="francisco">
             </div>

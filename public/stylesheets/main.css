@@ -114,6 +114,10 @@ div.collapse.navbar-collapse {
     height: 4em;
 }
 
+.div-header>img{
+    margin-left:1em;
+}
+
 .div-footer {
     border-top: none;
     width: 100%;
