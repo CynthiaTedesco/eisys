@@ -24,7 +24,7 @@
                     <img src="<%= slideshows[i].imgSrc %>" alt="<%= slideshows[i].imgAlt %>">
                     <div class="container">
                         <div class="carousel-caption">
-                            <p class="">
+                            <p class="bold">
                                 <span><%= slideshows[i].caption %></span>
                         </div>
                     </div>
@@ -65,13 +65,13 @@
         </div>
         <div class="text-center col-sm-5 home-links">
             <div>
-                <div class="know-us"><a href="/conocenos"><%=menu.know%></a></div>
-                <div class="contact-us"><a href="/contacto"><%=menu.contact%></a></div>
+                <div class="know-us"><a href="/conocenos"><%=menu.know.label%></a></div>
+                <div class="contact-us"><a href="/contacto"><%=menu.contact.label%></a></div>
             </div>
         </div>
     </div> <!--row-->
     <div class="text-center home-services">
-        <div class="title extra-bold"><%=menu.services%></div>
+        <div class="title extra-bold"><%=menu.services.label%></div>
         <div class="orange-text subtitle"><%=contentManagement%></div>
         <div class="read-more medium"><a href="/servicios"><%=readMore%></a></div>
     </div>

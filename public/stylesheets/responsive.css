@@ -1,4 +1,18 @@
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
+
+    .carousel-caption {
+        top: 40%;
+    }
+
+    .carousel-inner > .item {
+        height: initial;
+    }
+
+    .jumbotron p {
+        max-width: 75%;
+        margin: 1em auto 2em;
+        font-size: x-large;
+    }
 
     div.collapse.navbar-collapse {
         background: transparent;
@@ -106,32 +120,36 @@
         right: 5%;
     }
 
-    div.content nav. navbar{
-        width:70%;
+    div.content nav. navbar {
+        width: 70%;
     }
 }
 
-@media screen and (min-width:980px){
-	div.home-links>div {
-		padding: 10.5em 25%;
-	}
-	.alliance{
-		margin: 0.5em;
-		padding: 1em 2em;
-	}
+@media screen and (min-width: 980px) {
+    div.home-links > div {
+        padding: 10.5em 25%;
+    }
+
+    .alliance {
+        margin: 0.5em;
+        padding: 1em 2em;
+    }
 }
 
-@media screen and (min-width:992px){
-	div.home-links>div {
-		padding: 7em 25%;
-	}
-	.alliance.left{
-		margin-left:auto;
-	}
-	.alliance.right{
-		margin-right:auto;
-	}
-	.alliances-logos{
-		display: inline-flex;
-	}
+@media screen and (min-width: 992px) {
+    div.home-links > div {
+        padding: 7em 25%;
+    }
+
+    .alliance.left {
+        margin-left: auto;
+    }
+
+    .alliance.right {
+        margin-right: auto;
+    }
+
+    .alliances-logos {
+        display: inline-flex;
+    }
 }
