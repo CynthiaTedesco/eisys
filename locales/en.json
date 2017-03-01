@@ -49,5 +49,30 @@
   "working.paragraph3": "It is worth mentioning that once we conclude a project, we offer a support and maintenance service; its main purpose is to ensure both the optimum performance of the solution we implemented and its maximum uptime in the environment of the client. In order to provide this service, we use modern tools and cutting-edge technologies that allow for not only the proper management of each support request, but also its traceability. Furthermore, we utilize agile methodologies that contribute to reduce the reply and resolution time to a minimum.",
 
   "allies.title": "OUR BUSINESS ALLIES",
-  "allies.paragraph1": "As we think that the whole is much greater than the sum of its parts, we believed it was important to create a unit of experts of different areas so that we can give a unique added value to our clients. Consequently, we formed the following business alliances:"
+  "allies.paragraph1": "As we think that the whole is much greater than the sum of its parts, we believed it was important to create a unit of experts of different areas so that we can give a unique added value to our clients. Consequently, we formed the following business alliances:",
+
+  "services.question": "What is Content Management?",
+  "services.answer.paragraph1": "Content Management refers to the systematic gathering and organization of information that will be used by a certain audience – companies CEOs and clients, among others. This is neither a technology, a methodology, nor a process, it is a dynamic combination of strategies, methods and tools utilized to capture, manage, store, secure, and provide information that supports the main organizational processes throughout its life cycle.",
+  "services.answer.paragraph2": "Eisys provides consulting, development, implementation, support, and maintenance services of Middleware Content Management solutions through the Oracle WebCenter tools that are mentioned below:",
+
+  "services.webcenter.title": "Oracle WebCenter Content",
+  "services.webcenter.text": "This solution provides a unified repository to house unstructured content, enabling our clients to deliver it to business users in the proper format and within the context of familiar applications that fit the way they work.",
+  "services.webcenter.document": "Document Management",
+  "services.webcenter.document.text": "This solution allows our clients to effectively and efficiently capture, secure, share, and distribute digital and paper-based documents and reports. Thus our clients will save money and improve operational efficiencies by streamlining collaboration, automating routine tasks, and lowering costs related to the creation, management, and storage of business documents.",
+  "services.webcenter.digital": "Digital Asset Management",
+  "services.webcenter.digital.text": "This solution allows our clients to store, find, view, and use digital assets and rich media quickly and easily. Content, collateral, and individual asset items can be made available instantly in the appropriate formats for use on Web sites, in print materials, or in other programs. Assets can be protected and controlled through rich and configurable access control.",
+  "services.webcenter.enterprise": "Enterprise Capture and Imaging",
+  "services.webcenter.enterprise.text": "Throughout business processes, unstructured information remains trapped within paper and electronic documents, requiring large amounts of time and significant cost to transfer data into back-end systems for it to be effectively utilized. In order to cut costs and increase efficiencies our clients are choosing to look at ways to automate document processing, for which this is the perfect solution.",
+  "services.webcenter.records": "Records Management",
+  "services.webcenter.records.text": "This solution helps our clients control the creation, declaration, classification, retention, and destruction of content and business records, resulting in improved compliance, minimized litigation risk, and lower storage costs.",
+
+  "services.cloud.title": "Oracle Documents Cloud",
+  "services.cloud.paragraph1": "Oracle Documents Cloud Service is an enterprise-level collaboration platform available in Oracle Cloud that connects people and information. Built for the enterprise from the ground up, it offers robust security and integration options, while at the same time focusing on easy-to-use collaboration optimized for social and mobile use.",
+  "services.cloud.paragraph2": "When Oracle Documents Cloud Service is used with Oracle WebCenter Content, you have a truly comprehensive hybrid enterprise content management solution, with a unified ECM infrastructure and security from a single vendor.",
+
+  "services.sites.title": "Oracle WebCenter Sites",
+  "services.sites.paragraph1": "This solution enables our clients to deliver exceptional digital experience to customers through agility in content creation, effective visitor engagement and quick time to market. WebCenter Sites uniquely offers our clients the ability to connect the customer experience across all touch points – to build loyalty, drive customer acquisition, and reduce operational costs.",
+
+  "services.portal.title": "Oracle WebCenter Portal",
+  "services.portal.paragraph1": "This solutions allows our clients to quickly and easily create intranets, extranets, composite applications, and self-service portals, providing users a more secure and efficient way of consuming information and interacting with applications, processes, and other users."
 }
