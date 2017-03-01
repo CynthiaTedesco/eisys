@@ -24,6 +24,7 @@
   "portal": "ORACLE WEBCENTER PORTAL",
   "sites": "ORACLE WEBCENTER SITES",
   "cloud": "ORACLE DOCUMENTS CLOUD",
+
   "about.title": "ABOUT EISYS",
   "about.paragraph1":"We are a young and dynamic company formed by a group of professionals with vast experience in Content Management.",
   "about.paragraph2":"We consider that a close relationship with the client, based on a thorough understanding of his needs, is one of the key elements that every project must have; therefore, our goal is to give a preferential, customized and professional treatment to each client.",
@@ -32,8 +33,21 @@
   "about.welcome":"Welcome to Eisys!",
   "about.director.name":"Francisco Boccalatte",
   "about.director":"CEO",
+
   "philosophy.title": "EISYS PHILOSOPHY",
+  "philosophy.paragraph1":"We are a company formed by professionals that work with passion and effort not only to give a customized treatment to our clients, but also to generate a real commitment with them in all the projects we carry out.",
+  "philosophy.paragraph2":"Knowledge, continuous training and experience are our most valuable assets that we use to guarantee an excellent final product that adjusts to the specific needs of our clients.",
+  "philosophy.paragraph3":"We are the only company in Argentina that has experts with Oracle WebCenter certifications. Besides we use combined working methodologies to meet agreed deadlines and to ensure the quality of our products so that our clients continue choosing us.",
+
   "background.title": "BACKGROUND",
+  "background.paragraph1":"The members of our team participated in the first Content Management practices in Argentina (in the middle of 2008), they trained in that specific field and obtained the appropriate Oracle WebCenter certifications. Due to the broad knowledge they acquired, they actively participated in most of the implementations of Enterprise Content Management made in different areas of the market, such as telcos, banks, government bodies, airlines and mass consumption enterprises, among many others.",
+  "background.paragraph2":"By understanding the need for a different proposal in terms of Content Management, as well as the demands and the requirements of the current market, Francisco Boccalatte (our CEO) tried to cristallize his vision and ideas. Thus Eisys was created as a convergence point of the experience that the professionals of this specialization have. Eisys main targets are to focus on the commitment with the client, to combine the Oracle methodologies that we learnt with our own methods and to give customized, flexible, scalable, and high-quality solutions that satisfy the needs of the most demanding clients.",
+
   "working.title": "OUR WAY OF WORKING",
-  "allies.title": "OUR BUSINESS ALLIES"
+  "working.paragraph1": "In Eisys, we believe in the triad of knowledge, combined methodologies and perception of our clients' needs. The first element is strengthened not only by experience, but also by continuous training, which we consider essential to create solutions using cutting-edge technology and standards. The second element implies a specific and innovative way of working that combines Oracle methodologies and our own methods and that guarantees a pertaining follow-up of each project, as well as the delivery of the final product in due time and proper form. The third element involves talking to the client, understanding his situation, making an adequate data-gathering and proposing the system that best fits his daily needs.",
+  "working.paragraph2": "In all our projects, we jointly agree with the client on the scope of the solution. Afterwards,  such solution is implemented in a test environment, then it is approved through User Approval Tests (UATs) and finally it is deployed to a production instance. During this process, we carry out a constant follow-up of the project and we inform the client about the progress we make. In Eisys, we consider that our clients' time is very important; therefore, we commit to meet all agreed deadlines so that the project adds value to the business when the clients need it.",
+  "working.paragraph3": "It is worth mentioning that once we conclude a project, we offer a support and maintenance service; its main purpose is to ensure both the optimum performance of the solution we implemented and its maximum uptime in the environment of the client. In order to provide this service, we use modern tools and cutting-edge technologies that allow for not only the proper management of each support request, but also its traceability. Furthermore, we utilize agile methodologies that contribute to reduce the reply and resolution time to a minimum.",
+
+  "allies.title": "OUR BUSINESS ALLIES",
+  "allies.paragraph1": "As we think that the whole is much greater than the sum of its parts, we believed it was important to create a unit of experts of different areas so that we can give a unique added value to our clients. Consequently, we formed the following business alliances:"
 }

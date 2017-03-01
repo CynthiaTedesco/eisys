@@ -1,102 +1,114 @@
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) {
 
     div.collapse.navbar-collapse {
         background: transparent;
     }
-	a.navbar-brand img {
-	  	position: absolute;
-    	bottom: 0;
-	}
 
-	.main.navbar-default .navbar-nav>.active>a{
-		color: white;
-    	background-color: #0A3A4A;
-	}
+    a.navbar-brand img {
+        position: absolute;
+        bottom: 0;
+    }
 
-    .know.navbar-default .navbar-nav>.active>a{
+    .main.navbar-default .navbar-nav > .active > a {
+        color: white;
+        background-color: #0A3A4A;
+    }
+
+    .know.navbar-default .navbar-nav > .active > a {
         border-radius: 2em;
         color: white;
         background-color: #F19200;
-        height:auto;
+        height: auto;
     }
 
-	.main.navbar-default .navbar-nav>li>a{
-    	padding-bottom: 0.5em;
-    	padding-top: 0.5em;
+    .main.navbar-default .navbar-nav > li > a {
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
         margin: auto;
-	}
+    }
 
-    .know.navbar-default .navbar-nav>li.active>a:after{
+    .know.navbar-default .navbar-nav > li.active > a:after {
         content: url(../images/conocenos/menu-arrow.png);
         display: block;
         position: absolute;
         right: 1.5em;
         top: 35%;
     }
-    .know.navbar-default .navbar-nav>li>a{
+
+    .know.navbar-default .navbar-nav > li > a {
         padding-top: 15px;
         padding-bottom: 15px;
     }
 
-	.navbar-nav>li {
-	    margin-left: 1em;
+    .navbar-nav > li {
+        margin-left: 1em;
         border-bottom: none;
-	}
+    }
 
     .navbar div.container-fluid {
-		height: 6em
-	}
+        height: 6em
+    }
 
-	.footer {
-	  background: #c0c0c0;
-	  color:white;
-	}
+    .footer {
+        background: #c0c0c0;
+        color: white;
+    }
 
-	.footer-social{
-		background: url("../images/footer/bk-social.jpg") no-repeat;  
-		padding: 4em 4em 0;
-    	border-left: 1px solid orange;
-		margin:initial;
-	}
+    .footer-social {
+        background: url("../images/footer/bk-social.jpg") no-repeat;
+        padding: 4em 4em 0;
+        border-left: 1px solid orange;
+        margin: initial;
+    }
 
-	.div-footer{
-  		border-top: orange solid 1px;
-	}
+    .div-footer {
+        border-top: orange solid 1px;
+    }
 
-	div.commitment {
-		padding: 1em 0;
-	}
+    div.commitment {
+        padding: 1em 0;
+    }
 
-	div.home-links{
-		margin-top: 0;
-		width:41.66666667%;
-	}
+    div.home-links {
+        margin-top: 0;
+        width: 41.66666667%;
+    }
 
-	div.home-links>div{
-		padding: 12em 25%;
-	}
+    div.home-links > div {
+        padding: 12em 25%;
+    }
 
-	div.home-links>div>div {
-		margin: 1.5em 0;
-		padding: 5%;
-		border-radius: initial;
-	}
+    div.home-links > div > div {
+        margin: 1.5em 0;
+        padding: 5%;
+        border-radius: initial;
+    }
 
-	.alliances-logos{
-		padding: 0 1%;
-	}
+    .alliances-logos {
+        padding: 0 1%;
+    }
 
-    /*div.li-profile-container.company {*/
-        /*width: 100%!important;*/
-    /*}*/
+    .banner {
+        height: 100em;
+    }
 
-    /*div.wrapper>div.container-outer {*/
-        /*width: 93.5%;*/
-    /*}*/
+    div.content {
+        margin-right: initial;
+    }
 
-    /*.framed #body .wrapper {*/
-        /*width:200px;*/
-    /*}*/
+    div.content div.menu {
+        position: absolute;
+        left: 0;
+    }
+
+    div.content div.section {
+        position: absolute;
+        right: 5%;
+    }
+
+    div.content nav. navbar{
+        width:70%;
+    }
 }
 
 @media screen and (min-width:980px){
