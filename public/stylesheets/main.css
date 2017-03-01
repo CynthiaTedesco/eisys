@@ -567,6 +567,10 @@ div.banner > div.title {
 }
 
 /*-------- CONOCENOS --------- */
+.allies-logos>img, .img-trabajo>img, .img-filosofia>img{
+    margin:auto;
+}
+
 .banner.conocenos {
     background-image: url("../images/conocenos/bk.jpg");
 }

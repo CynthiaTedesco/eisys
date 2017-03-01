@@ -29,7 +29,10 @@ conocenosRouter.route('/acerca').get(function (request, response, next) {
 conocenosRouter.route('/filosofia').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        section: {title: js.getObj().__('philosophy.title')},
+        section: {title: js.getObj().__('philosophy.title'),
+            paragraph1: js.getObj().__('philosophy.paragraph1'),
+            paragraph2: js.getObj().__('philosophy.paragraph2'),
+            paragraph3: js.getObj().__('philosophy.paragraph3')},
         subsection: '../pages/filosofia.ejs'
     })
     locals.menu.know.class = 'active';
@@ -39,7 +42,9 @@ conocenosRouter.route('/filosofia').get(function (request, response, next) {
 conocenosRouter.route('/trayectoria').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        section: {title: js.getObj().__('background.title')},
+        section: {title: js.getObj().__('background.title'),
+            paragraph1: js.getObj().__('background.paragraph1'),
+            paragraph2: js.getObj().__('background.paragraph2')},
         subsection: '../pages/trayectoria.ejs'
     });
     locals.menu.know.class = 'active';
@@ -49,7 +54,10 @@ conocenosRouter.route('/trayectoria').get(function (request, response, next) {
 conocenosRouter.route('/trabajo').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        section: {title: js.getObj().__('working.title')},
+        section: {title: js.getObj().__('working.title'),
+            paragraph1: js.getObj().__('working.paragraph1'),
+            paragraph2: js.getObj().__('working.paragraph2'),
+            paragraph3: js.getObj().__('working.paragraph3')},
         subsection: '../pages/trabajo.ejs'
     });
     locals.menu.know.class = 'active';
@@ -59,7 +67,8 @@ conocenosRouter.route('/trabajo').get(function (request, response, next) {
 conocenosRouter.route('/alianzas').get(function (request, response, next) {
     var locals = js.getLocals({
         title: js.getObj().__('nav.know.us'),
-        section: {title: js.getObj().__('allies.title')},
+        section: {title: js.getObj().__('allies.title'),
+            paragraph1: js.getObj().__('allies.paragraph1')},
         subsection: '../pages/alianzas.ejs'
     });
     locals.menu.know.class = 'active';

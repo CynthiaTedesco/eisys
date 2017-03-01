@@ -103,11 +103,16 @@
     }
 
     .banner {
-        height: 85em;
+        /*height: 85em;*/
+        height: auto;
+        display: inline-block;
+        /*padding-bottom: 2em;*/
     }
 
     div.content {
         margin-right: initial;
+        display: inherit;
+        padding-bottom: 5%;
     }
 
     div.content div.menu {
@@ -130,6 +135,7 @@
 
     div.content div.section {
         border:none;
+        min-height: 30em;
         /*position: absolute;*/
         /*right: 5%;*/
     }
@@ -167,7 +173,7 @@
     }
 
     .banner {
-        height: 80em;
+        /*height: 80em;*/
     }
 
     .alliance {
