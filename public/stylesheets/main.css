@@ -624,8 +624,83 @@ div.photo {
     margin-bottom: 2em;
 }
 /*-------- SERVICIOS --------- */
-.banner.servicios {
+.banner.services {
     background-image: url("../images/servicios/bk.jpg");
+    padding: 0 15% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.banner.services > div.title {
+    padding-top: 4em;
+    margin-bottom: 1em;
+}
+
+div.banner.services > div.subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10%;
+}
+
+div.banner.services > div.paragraph {
+    text-align: inherit;
+    color:white;
+}
+
+div.services:not(.banner)>div.paragraph {
+    text-transform: uppercase;
+    padding: 10% 5%;
+    text-align: center;
+}
+
+div.services:not(.banner)>div.content{
+    background: #F7F8FA;
+    display: inline-block;
+}
+
+div.services:not(.banner)>div.content>img{
+    margin: auto;
+}
+
+.services .sub-content .orange-text.subtitle {
+    background: #fff;
+    margin: 5%;
+    padding: 5%;
+    text-transform: uppercase;
+    font-size: initial;
+    min-height: 80px;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}
+
+.sub-content div.text {
+    margin: 0 5% 5%;
+    clear: both;
+}
+
+.services .sub-content .orange-text.subtitle>img {
+    float: left;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.services .sub-content .item-title {
+    display: inline-block;
+    margin: 5%;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 90%;
+}
+
+.services .sub-content .item-title>img{
+    display: inline-block;
+    float: left;
+    margin-right: 3%;
+}
+
+.sub-content .item .item-text {
+    margin: 0 12%;
 }
 
 /*-------- CONTACTO --------- */

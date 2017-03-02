@@ -6,31 +6,86 @@
 </head>
 
 <body>
-	<% include ../partials/page-header.ejs %>
-    <% include ../partials/nav.ejs %>
-	<div class="m-t-5-6em">
-		<div class="banner servicios">
-			<div class="title extra-bold"><%= title %></div>
-		</div>
-	    <div class="title text-center">
-	        <%= title %>
-	        portada
-	    </div>
-	    <div class="text-center">
-	    	descripcion mayus
-	    </div>
-	    <div class="row">
-	    	<div class="col-sm-6">
-	    		<div class="text-center">oracle web center</div>
-	    	</div>
-	    	<div class="col-sm-6">
-	    		<div class="text-center">oracle document cloud</div>
-	    		<div class="text-center">oracle webcenter sites</div>
-	    		<div class="text-center">oracle webcenter portal</div>
-	    	</div>
-	    </div>
+<% include ../partials/page-header.ejs %>
+<% include ../partials/nav.ejs %>
+<div class="m-t-5-6em services">
+    <div class="banner services">
+        <div class="title extra-bold"><%= title %></div>
+        <div class="subtitle text-center bold"><%- question %></div>
+        <div class="paragraph text-center"><%= answer_paragraph1 %></div>
     </div>
-    <% include ../partials/page-footer.ejs %>
+    <div class="paragraph text-center semi-bold"><%- answer_paragraph2 %></div>
+    <div class="content text-center">
+        <div class="sub-content">
+            <div class="orange-text subtitle">
+                <img src="../images/servicios/ico-content.png" alt="webcenter-icon" class="img-responsive">
+                <%= webcenter_title %>
+            </div>
+            <div class="text text-left"><%= webcenter_text %></div>
+            <div class="item text-left">
+                <div class="item-title">
+                    <img src="../images/servicios/list.png" alt="list-icon" class="img-responsive">
+                    <div class="bold"><%= webcenter_document %></div>
+                </div>
+                <div class="item-text"><%= webcenter_document_text %></div>
+            </div>
+            <div class="item text-left">
+                <div class="item-title">
+                    <img src="../images/servicios/list.png" alt="list-icon" class="img-responsive">
+                    <div class="bold"><%= webcenter_digital %></div>
+                </div>
+                <div class="item-text"><%= webcenter_digital_text %></div>
+            </div>
+            <div class="item text-left">
+                <div class="item-title">
+                    <img src="../images/servicios/list.png" alt="list-icon" class="img-responsive">
+                    <div class="bold"><%= webcenter_enterprise %></div>
+                </div>
+                <div class="item-text"><%- webcenter_enterprise_text %></div>
+            </div>
+            <div class="item text-left">
+                <div class="item-title">
+                    <img src="../images/servicios/list.png" alt="list-icon" class="img-responsive">
+                    <div class="bold"><%= webcenter_records %></div>
+                </div>
+                <div class="item-text"><%= webcenter_records_text %></div>
+            </div>
+        </div>
+        <div class="sub-content">
+            <div class="orange-text subtitle">
+                <img src="../images/servicios/ico-cloud.png" alt="cloud-icon" class="img-responsive">
+                <%= cloud_title %>
+            </div>
+            <div class="text text-left"><%- cloud_paragraph1 %></div>
+            <div class="text text-left"><%- cloud_paragraph2 %></div>
+        </div>
+        <div class="sub-content">
+            <div class="orange-text subtitle">
+                <img src="../images/servicios/ico-sites.png" alt="sites-icon" class="img-responsive">
+                <%= sites_title %>
+            </div>
+            <div class="text text-left"><%= sites_paragraph1 %></div>
+        </div>
+        <div class="sub-content">
+            <div class="orange-text subtitle">
+                <img src="../images/servicios/ico-portal.png" alt="portal-icon" class="img-responsive">
+                <%= portal_title %>
+            </div>
+            <div class="text text-left"><%= portal_paragraph1 %></div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="col-sm-6">-->
+            <!--<div class="text-center">oracle web center</div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6">-->
+            <!--<div class="text-center">oracle document cloud</div>-->
+            <!--<div class="text-center">oracle webcenter sites</div>-->
+            <!--<div class="text-center">oracle webcenter portal</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<% include ../partials/page-footer.ejs %>
 </body>
 
 </html>

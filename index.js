@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var path = require("path");
 const routes = require('./routes');
 var conocenosRouter = require('./routes/conocenosRouter');
+var servicesRouter = require('./routes/servicesRouter');
 
 var i18n = require('i18n');
 var cookieParser = require('cookie-parser');
@@ -26,6 +27,7 @@ app.use(cookieParser());
 //  Connect all our routes to our application
 app.use('/', routes);
 app.use('/conocenos', conocenosRouter.router());
+app.use('/servicios', servicesRouter.router());
 
 app.use(i18n.init);
 app.set('port', (process.env.PORT || 5000));

@@ -77,11 +77,6 @@ routes.get('/contacto', function (request, response) {
     locals.menu.contact.class = "active";
     response.render('pages/contacto', locals);
 });
-routes.get('/servicios', function (request, response) {
-    var locals = js.getLocals({title: 'SERVICIOS'});
-    locals.menu.services.class = "active";
-    response.render('pages/servicios', locals);
-});
 
 //resolves language
 var setLanguage = function (request) {
