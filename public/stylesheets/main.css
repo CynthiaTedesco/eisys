@@ -27,8 +27,8 @@
     /*max-width: 75%;*/
 }
 
-.carousel-caption{
-    top:30%;
+.carousel-caption {
+    top: 30%;
 }
 
 .navbar + .jumbotron {
@@ -114,8 +114,8 @@ div.collapse.navbar-collapse {
     height: 4em;
 }
 
-.div-header>img{
-    margin-left:1em;
+.div-header > img {
+    margin-left: 1em;
 }
 
 .div-footer {
@@ -128,7 +128,7 @@ div.collapse.navbar-collapse {
 .footer-div {
     position: relative;
     height: 4em;
-    margin-left:4%;
+    margin-left: 4%;
 }
 
 .footer {
@@ -178,11 +178,11 @@ a:hover {
 
 .carousel-inner > .item > img {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
-.carousel-inner>.item{
-    height:25em;
+.carousel-inner > .item {
+    height: 25em;
 }
 
 div.slideshow.jumbotron {
@@ -567,8 +567,8 @@ div.banner > div.title {
 }
 
 /*-------- CONOCENOS --------- */
-.allies-logos>img, .img-trabajo>img, .img-filosofia>img{
-    margin:auto;
+.allies-logos > img, .img-trabajo > img, .img-filosofia > img {
+    margin: auto;
 }
 
 .banner.conocenos {
@@ -589,7 +589,8 @@ div.banner > div.title {
     border: none;
     opacity: 1;
 }
-div.section>div.title {
+
+div.section > div.title {
     background: white;
     vertical-align: middle;
     padding: 1em;
@@ -598,31 +599,37 @@ div.section>div.title {
     color: #FA9B2B;
     margin: 0 -15px 1em;
 }
-div.section{
+
+div.section {
     background: #F7F8FA;
     padding-bottom: 4em;
     border-bottom: 1px solid #F49102;
 }
-div.paragraphs{
-    padding:10px;
+
+div.paragraphs {
+    padding: 10px;
 }
 
-div.section div.paragraph{
+div.section div.paragraph {
     margin-bottom: 2em;
 }
-div.signature{
-    padding:0;
+
+div.signature {
+    padding: 0;
 }
 
 div.signature > div.signature, div.welcome {
     text-align: left;
 }
-div.welcome{
+
+div.welcome {
     margin-bottom: 2em;
 }
+
 div.photo {
     margin-bottom: 2em;
 }
+
 /*-------- SERVICIOS --------- */
 .banner.services {
     background-image: url("../images/servicios/bk.jpg");
@@ -642,24 +649,24 @@ div.banner.services > div.subtitle {
     margin-bottom: 10%;
 }
 
-div.banner.services > div.paragraph {
+div.banner.services > div.paragraph, div.banner.contact > div.paragraph {
     text-align: inherit;
-    color:white;
+    color: white;
 }
 
-div.services:not(.banner)>div.paragraph {
+div.services:not(.banner) > div.paragraph {
     text-transform: uppercase;
     padding: 10% 5%;
     text-align: center;
     background: #fff;
 }
 
-div.services:not(.banner)>div.content{
+div.services:not(.banner) > div.content {
     background: #F7F8FA;
     display: inline-block;
 }
 
-div.services:not(.banner)>div.content>img{
+div.services:not(.banner) > div.content > img {
     margin: auto;
 }
 
@@ -680,7 +687,7 @@ div.services:not(.banner)>div.content>img{
     clear: both;
 }
 
-.services .sub-content .orange-text.subtitle>img {
+.services .sub-content .orange-text.subtitle > img {
     float: left;
     display: inline-block;
     margin-right: 5%;
@@ -694,7 +701,7 @@ div.services:not(.banner)>div.content>img{
     width: 90%;
 }
 
-.services .sub-content .item-title>img{
+.services .sub-content .item-title > img {
     display: inline-block;
     float: left;
     margin-right: 3%;
@@ -705,6 +712,58 @@ div.services:not(.banner)>div.content>img{
 }
 
 /*-------- CONTACTO --------- */
-.banner.contacto {
+.banner.contact {
     background-image: url("../images/contacto/bk.jpg");
+    padding: 0 15% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+div.banner.contact > div.paragraph {
+    text-transform: uppercase;
+    font-size: large;
+}
+
+div.banner.contact > div.paragraph a {
+    color: white;
+    display: inline-block;
+}
+
+div.contact #form div.button {
+    padding: 5%;
+    text-align: center;
+}
+
+div.contact #form div.button button{
+    text-transform: uppercase;
+    width: 40%;
+    padding: 3%;
+    background: #acbdc7;
+    letter-spacing: 0.2em;
+}
+
+div.contact .fields {
+    padding: 5%;
+}
+
+.contact .fields div.field {
+    padding: 1em 30px;
+    color: #0a404c;
+    text-align: left;
+}
+
+.contact .fields .message div.field{
+    padding:1em 15px;
+}
+
+#form{
+    background: #f7f8fa;
+}
+
+.fields .row input, textarea{
+    width: 90%;
+    line-height: 3em;
+    border: none;
+    padding: 0 5%;
 }

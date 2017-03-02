@@ -30,6 +30,7 @@ servicesRouter.route('/').get(function (request, response) {
         portal_title: js.getObj().__('services.portal.title'),
         portal_paragraph1: js.getObj().__('services.portal.paragraph1')
     });
+    locals.menu.services.class = 'active';
     response.render('pages/servicios', locals);
 })
 
