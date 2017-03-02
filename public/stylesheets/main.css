@@ -651,6 +651,7 @@ div.services:not(.banner)>div.paragraph {
     text-transform: uppercase;
     padding: 10% 5%;
     text-align: center;
+    background: #fff;
 }
 
 div.services:not(.banner)>div.content{
@@ -700,7 +701,7 @@ div.services:not(.banner)>div.content>img{
 }
 
 .sub-content .item .item-text {
-    margin: 0 12%;
+    margin: 0 10.5%;
 }
 
 /*-------- CONTACTO --------- */

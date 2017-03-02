@@ -143,6 +143,22 @@
     div.content nav. navbar {
         width: 70%;
     }
+
+    div.banner.services > div.title {
+        padding-top: 6em;
+    }
+
+    div.banner.services > div.subtitle{
+        margin-bottom:5%;
+    }
+
+    div.services:not(.banner)>div.paragraph{
+        padding:5%;
+    }
+
+    div.services:not(.banner){
+        background-color: #F7F8FA;
+    }
 }
 
 @media screen and (min-width: 900px) {
