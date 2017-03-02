@@ -748,13 +748,9 @@ div.contact .fields {
 }
 
 .contact .fields div.field {
-    padding: 1em 30px;
+    padding: 1em;
     color: #0a404c;
     text-align: left;
-}
-
-.contact .fields .message div.field{
-    padding:1em 15px;
 }
 
 #form{
@@ -766,4 +762,19 @@ div.contact .fields {
     line-height: 3em;
     border: none;
     padding: 0 5%;
+}
+
+.mandatory{
+    padding: 5%;
+    font-style: italic;
+    text-align: right;
+}
+
+.field label {
+    width: 90%;
+    padding: 0 5%;
+}
+
+.message-area{
+    padding:0 15px;
 }

@@ -83,7 +83,8 @@ routes.get('/contacto', function (request, response) {
         cellphone: js.getObj().__('contact.cellphone'),
         mail: js.getObj().__('contact.mail'),
         comments: js.getObj().__('contact.comments'),
-        send:  js.getObj().__('contact.send')
+        send: js.getObj().__('contact.send'),
+        mandatory: js.getObj().__('contact.mandatory')
     });
     locals.menu.contact.class = "active";
     response.render('pages/contacto', locals);

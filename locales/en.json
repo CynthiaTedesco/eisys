@@ -74,5 +74,6 @@
   "contact.cellphone": "Telephone number:",
   "contact.mail": "*E-mail address:",
   "contact.comments": "*Message",
-  "contact.send": "Send"
+  "contact.send": "Send",
+  "contact.mandatory": "* Required fields"
 }

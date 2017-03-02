@@ -125,16 +125,16 @@
         margin-top: auto;
     }
 
-    div.section>div.title{
-        width:80%;
+    div.section > div.title {
+        width: 80%;
     }
 
-    div.paragraphs>div.signature {
+    div.paragraphs > div.signature {
         padding-left: 3em;
     }
 
     div.content div.section {
-        border:none;
+        border: none;
         min-height: 30em;
         /*position: absolute;*/
         /*right: 5%;*/
@@ -148,23 +148,48 @@
         padding-top: 6em;
     }
 
-    div.banner.services > div.subtitle{
-        margin-bottom:5%;
+    div.banner.services > div.subtitle {
+        margin-bottom: 5%;
     }
 
-    div.services:not(.banner)>div.paragraph{
-        padding:5%;
+    div.services:not(.banner) > div.paragraph {
+        padding: 5%;
     }
 
-    div.services:not(.banner){
+    div.services:not(.banner) {
         background-color: #F7F8FA;
+    }
+
+    .mandatory {
+        padding: 2% 5%;
+    }
+
+    div.message {
+        min-height: 25em;
+    }
+
+    textarea {
+        height: 18em;
+    }
+
+    div.contact .fields {
+        min-height: 30em;
+    }
+
+    div.contact #form div.button {
+        padding: 3%;
+    }
+
+    div.contact #form div.button button {
+        width: 20%;
+        padding: 2%;
     }
 }
 
 @media screen and (min-width: 900px) {
 
-    div.section>div.title{
-        width:70%;
+    div.section > div.title {
+        width: 70%;
     }
 
     nav.know.navbar.navbar-default {
@@ -172,9 +197,11 @@
         margin-top: 5%;
         width: initial;
     }
-    .know > .navbar-right{
-        margin-right:0;
+
+    .know > .navbar-right {
+        margin-right: 0;
     }
+
     div.content div.section {
         /*right:1em;*/
     }
@@ -184,6 +211,7 @@
     div.home-links > div {
         padding: 10.5em 25%;
     }
+
     nav.know.navbar.navbar-default {
         font-size: inherit;
     }
