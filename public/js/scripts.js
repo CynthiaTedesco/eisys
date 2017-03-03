@@ -37,7 +37,7 @@ exports.getSelectedLang = function(){
 }
 
 exports.validRoute = function (url) {
-    return url.indexOf('images') + url.indexOf('stylesheets') + url.indexOf('js') === -3;
+    return url.indexOf('images') + url.indexOf('stylesheets') + url.indexOf('js') + url.indexOf('favicon') === -4;
 }
 exports.getNonSelectedLang = function () {
     return nonSelectedLang;

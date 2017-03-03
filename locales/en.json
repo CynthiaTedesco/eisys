@@ -66,7 +66,7 @@
   "services.portal.title": "Oracle WebCenter Portal",
   "services.portal.paragraph1": "This solutions allows our clients to quickly and easily create intranets, extranets, composite applications, and self-service portals, providing users a more secure and efficient way of consuming information and interacting with applications, processes, and other users.",
   "answer.paragraph1": "answer.paragraph1",
-  "contact.text": "<span>If you want to contact us, send us an e-mail to </span> <a class=\"bold\" href=\"mailto:contactus@eisys.com.ar\" target=\"_top\">contactus@eisys.com.ar</a> <span> or complete the information below:</span>",
+  "contact.text": "If you want to contact us, send us an e-mail to <a class=\"bold\" href=\"mailto:contactus@eisys.com.ar\" target=\"_top\">contactus@eisys.com.ar</a> or complete the information below:",
   "contact.name": "*Full name:",
   "contact.company": "Company:",
   "contact.position": "Position:",
