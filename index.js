@@ -3,6 +3,8 @@ var express = require('express');
 var favicon = require('serve-favicon');
 var path = require("path");
 const routes = require('./routes');
+var bodyParser = require('body-parser');
+
 var conocenosRouter = require('./routes/conocenosRouter');
 var contactRouter = require('./routes/contactRouter');
 var servicesRouter = require('./routes/servicesRouter');
@@ -25,6 +27,11 @@ js.setObj(obj);
 var app = express();
 
 app.use(cookieParser());
+// app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 //  Connect all our routes to our application
 app.use('/', routes);
 app.use('/contacto', contactRouter.router());

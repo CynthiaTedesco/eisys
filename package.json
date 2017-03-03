@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Eisys",
   "engines": {
-    "node": "6.9.1"
+    "node": "6.10.0"
   },
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,10 @@
     "test": "mocha"
   },
   "dependencies": {
+    "body-parser": "^1.17.0",
     "cookie-parser": "^1.4.3",
     "ejs": "2.4.1",
-    "express": "4.13.3",
+    "express": "^4.15.0",
     "i18n": "^0.8.3",
     "jquery": "^3.1.1",
     "jsdom": "^9.10.0",
