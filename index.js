@@ -26,10 +26,7 @@ js.setObj(obj);
 var app = express();
 
 app.use(cookieParser());
-// app.use(bodyParser.urlencoded());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.text());
 
 //  Connect all our routes to our application
 app.use('/', routes);

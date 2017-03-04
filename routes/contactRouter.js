@@ -3,11 +3,45 @@ var js = require('../public/js/scripts');
 var nodemailer = require('nodemailer');
 
 var contactRouter = express.Router();
-var mailHandler = function (request, response) {
+var makeEmail = function (name, company, position, phone, cellphone, email, comments) {
+    var emailText = 'Has recibido un nuevo mensaje de <b>' + name +':</b><br/><br/>';
+    if (company){
+        emailText = emailText.concat('<b>Empresa:</b> ' + company + '<br/>');
+    }
+    if (position){
+        emailText = emailText.concat('<b>Puesto:</b> ' + position + '<br/>');
+    }
+    if (phone){
+        emailText = emailText.concat('<b>Telefono:</b> ' + phone + '<br/>');
+    }
+    if (cellphone){
+        emailText = emailText.concat('<b>Teléfono movil:</b> ' + cellphone + '<br/>');
+    }
 
-    console.log('ADENTROOO DEL HANDLER');
-    console.log(request.body);
-    // Not the movie transporter!
+    emailText = emailText.concat('<b>Email:</b> ' + email + '<br/>');
+    emailText = emailText.concat('<br/><b>Mensaje:</b><br/><br/> ' + comments + '<br/>');
+
+    return emailText;
+}
+var getCompleteMessage = function (array) {
+    var msg = array[6].replace('comments=', '');
+    for (var i = 7; i < array.length; i++) {
+        msg = msg.concat(array[i] ? array[i] : '<br/>');
+    }
+
+    return msg;
+}
+
+var mailHandler = function (request, response) {
+    var bodyArray = request.body.split('\r\n');
+    var name = bodyArray[0].substring(bodyArray[0].indexOf('=')+1, bodyArray[0].length);
+    var company = bodyArray[1].substring(bodyArray[1].indexOf('=')+1, bodyArray[1].length);
+    var position = bodyArray[2].substring(bodyArray[2].indexOf('=')+1, bodyArray[2].length);
+    var phone = bodyArray[3].substring(bodyArray[3].indexOf('=')+1, bodyArray[3].length);
+    var cellphone = bodyArray[4].substring(bodyArray[4].indexOf('=')+1, bodyArray[4].length);
+    var email = bodyArray[5].substring(bodyArray[5].indexOf('=')+1, bodyArray[5].length);
+    var comments = getCompleteMessage(bodyArray);
+
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -21,8 +55,8 @@ var mailHandler = function (request, response) {
         from: 'lexartd@gmail.com', // sender address
         to: 'cynthia.tedesco@gmail.com', // list of receivers
         subject: 'Email Example', // Subject line
-        text: text //, // plaintext body
-        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+        // You can choose to send an HTML body instead
+        html: makeEmail(name, company, position, phone, cellphone, email, comments)
     };
 
     transporter.sendMail(mailOptions, function(error, info){
@@ -72,4 +106,3 @@ contactRouter.route('/send').post(mailHandler);
 exports.router = function () {
     return contactRouter;
 }
-

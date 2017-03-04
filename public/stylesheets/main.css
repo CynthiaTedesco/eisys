@@ -764,6 +764,10 @@ div.contact .fields {
     padding: 0 5%;
 }
 
+textarea{
+    line-height:2em;
+}
+
 .mandatory{
     padding: 5%;
     font-style: italic;
