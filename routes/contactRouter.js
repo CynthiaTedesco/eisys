@@ -27,11 +27,9 @@ var mailHandler = function (request, response) {
 
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
-            console.log('ha habido un error: ' + error);
-            response.json({yo: 'error'});
+            response.redirect('/contacto?success=false');
         }else{
-            console.log('Eeeeeexito. Message sent: ' + info.response);
-            response.json({yo: info.response});
+            response.redirect('/contacto?success=true');
         };
     });
 }
@@ -50,9 +48,25 @@ contactRouter.route('/').get(function (request, response) {
         send: js.getObj().__('contact.send'),
         mandatory: js.getObj().__('contact.mandatory')
     });
-    locals.menu.contact.class = "active";
+    locals.menu.contact.class = 'active';
+    locals.success = js.getObj().__('contact.success');
+    locals.error = js.getObj().__('contact.error');
+    locals.successMessage = js.getObj().__('contact.success.message');
+    locals.errorMessage = js.getObj().__('contact.error.message');
+    locals.resultMessage = '';
+
+    if (request.query && request.query.success){
+        console.log(request.query.success);
+        if (request.query.success === 'true'){
+            locals.resultMessage = '../partials/success.message.ejs'
+        } else if (request.query.success === 'false'){
+            locals.resultMessage = '../partials/error.message.ejs'
+        }
+    }
+
     response.render('pages/contacto', locals);
 })
+
 contactRouter.route('/send').post(mailHandler);
 
 exports.router = function () {

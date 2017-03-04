@@ -6,6 +6,9 @@
 </head>
 
 <body>
+<%if (resultMessage) { %>
+    <%- include(resultMessage) %>
+<% }%>
 <% include ../partials/page-header.ejs %>
 <% include ../partials/nav.ejs %>
 <div class="m-t-5-6em contact">
@@ -72,16 +75,6 @@
                 </div>
                 <div class="message-area">
                     <textarea required rows="4"></textarea>
-                </div>
-                <div class="message-notification error-message hidden">
-                    <br/>
-                    <i class="fa fa-times error-color" aria-hidden="true"></i>
-                    <span class="label" key="message-notification-failed"></span>
-                </div>
-                <div class="success-message success-message-contactanos hidden">
-                    <br/>
-                    <i class="fa fa-check success-color" aria-hidden="true"></i>
-                    <span class="label" key="message-notification"></span>
                 </div>
             </div>
         </div>

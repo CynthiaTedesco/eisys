@@ -75,5 +75,9 @@
   "contact.mail": "*E-mail address:",
   "contact.comments": "*Message",
   "contact.send": "Send",
-  "contact.mandatory": "* Required fields"
+  "contact.mandatory": "* Required fields",
+  "contact.success":"Success!",
+  "contact.error":"Error!",
+  "contact.success.message":"Your message has been sent.",
+  "contact.error.message":"Your message has not been sent."
 }

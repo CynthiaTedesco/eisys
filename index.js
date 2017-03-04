@@ -20,7 +20,6 @@ i18n.configure({
     register: obj,
     directory: __dirname + '/locales'
 });
-console.log(obj.__('nav.services'));
 js.setTranslator(i18n);
 
 js.setObj(obj);
