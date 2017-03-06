@@ -24,9 +24,9 @@ var makeEmail = function (name, company, position, phone, cellphone, email, comm
     return emailText;
 }
 var getCompleteMessage = function (array) {
-    var msg = array[6].replace('comments=', '');
+    var msg = array[6].replace('comments=', '')  + '<br/>';
     for (var i = 7; i < array.length; i++) {
-        msg = msg.concat(array[i] ? array[i] : '<br/>');
+        msg = msg.concat(array[i] ? array[i] + '<br/>' : '<br/>');
     }
 
     return msg;
@@ -45,22 +45,23 @@ var mailHandler = function (request, response) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'lexartd@gmail.com', // Your email id
-            pass: 'lexarraxel' // Your password
+            user: 'eisys.sender@gmail.com', // Your email id
+            pass: 'eisyssysie' // Your password
         }
     });
 
     var text = 'Hello world from \n\n';
     var mailOptions = {
-        from: 'lexartd@gmail.com', // sender address
+        from: 'eisys.sender@gmail.com', // sender address
         to: 'cynthia.tedesco@gmail.com', // list of receivers
-        subject: 'Email Example', // Subject line
+        subject: 'Eisys web message', // Subject line
         // You can choose to send an HTML body instead
         html: makeEmail(name, company, position, phone, cellphone, email, comments)
     };
 
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
+            console.log(error);
             response.redirect('/contacto?success=false');
         }else{
             response.redirect('/contacto?success=true');
