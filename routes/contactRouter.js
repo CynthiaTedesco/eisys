@@ -53,7 +53,7 @@ var mailHandler = function (request, response) {
     var text = 'Hello world from \n\n';
     var mailOptions = {
         from: 'eisys.sender@gmail.com', // sender address
-        to: 'cynthia.tedesco@gmail.com', // list of receivers
+        to: 'escribinos@gmail.com', // list of receivers
         subject: 'Eisys web message', // Subject line
         // You can choose to send an HTML body instead
         html: makeEmail(name, company, position, phone, cellphone, email, comments)

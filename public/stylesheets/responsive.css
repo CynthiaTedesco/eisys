@@ -69,7 +69,9 @@
     }
 
     .footer-social {
-        background: url("../images/footer/bk-social.jpg") no-repeat;
+        background: url(../images/footer/bk-social.jpg);
+        background-repeat: round;
+        background-size: cover;
         padding: 4em 4em 0;
         border-left: 1px solid orange;
         margin: initial;
