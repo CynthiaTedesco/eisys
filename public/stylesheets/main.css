@@ -463,6 +463,13 @@ div.commitment {
 
 div.paragraph {
     text-align: left;
+}
+
+div.section div.paragraph.orange-paragraph {
+    margin-bottom: 0.5em;
+}
+
+.paragraph {
     font-family: raleway;
 }
 
@@ -567,8 +574,19 @@ div.banner > div.title {
 }
 
 /*-------- CONOCENOS --------- */
+.allies-logos {
+    margin-top:1em;
+}
 .allies-logos > img, .img-trabajo > img, .img-filosofia > img {
     margin: auto;
+}
+
+.img-filosofia{
+    margin-bottom: 2em;
+}
+
+.orange-paragraph {
+    color: #F19100;
 }
 
 .banner.conocenos {
@@ -712,6 +730,20 @@ div.services:not(.banner) > div.content > img {
 }
 
 /*-------- CONTACTO --------- */
+.result-message {
+    text-align: right;
+    font-size: initial;
+    padding: 2em 5%;
+    width: 100%;
+}
+
+.result-message.error {
+    color: red;
+}
+.result-message.success {
+    color: green;
+}
+
 .banner.contact {
     background-image: url("../images/contacto/bk.jpg");
     padding: 0 15% 10%;

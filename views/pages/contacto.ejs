@@ -6,9 +6,6 @@
 </head>
 
 <body>
-<%if (resultMessage) { %>
-    <%- include(resultMessage) %>
-<% }%>
 <% include ../partials/page-header.ejs %>
 <% include ../partials/nav.ejs %>
 <div class="m-t-5-6em contact">
@@ -75,6 +72,9 @@
                 </div>
                 <div class="message-area">
                     <textarea name="comments" required rows="4"></textarea>
+                    <%if (resultMessage) { %>
+                        <%- include(resultMessage) %>
+                    <% }%>
                 </div>
             </div>
         </div>

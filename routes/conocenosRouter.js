@@ -32,7 +32,8 @@ conocenosRouter.route('/filosofia').get(function (request, response, next) {
         section: {title: js.getObj().__('philosophy.title'),
             paragraph1: js.getObj().__('philosophy.paragraph1'),
             paragraph2: js.getObj().__('philosophy.paragraph2'),
-            paragraph3: js.getObj().__('philosophy.paragraph3')},
+            paragraph3: js.getObj().__('philosophy.paragraph3'),
+            paragraph4: js.getObj().__('philosophy.paragraph4')},
         subsection: '../pages/filosofia.ejs'
     })
     locals.menu.know.class = 'active';
