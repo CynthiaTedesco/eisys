@@ -9,13 +9,11 @@ $(function () {
     });
 
     if ($(".result-message").size() > 0){
-    //     console.log('Setting focus');
-    //     document.getElementsByClassName("result-message").focus();
-    //     // $(window).scrollTop($(".result-message").position().top);
         location.href = "#result-message";
-        // $(".result-message")[0].focus();
     }
 
-    // window.setTimeout(function () { $('.result-message').focus(); }, 1);
+    $('.to-top').click(function () {
+        location.href = "#";
+    });
 
 });

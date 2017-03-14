@@ -118,6 +118,12 @@ div.collapse.navbar-collapse {
     margin-left: 1em;
 }
 
+.to-top{
+    text-align: right;
+    margin-top: -5%;
+    margin-bottom: 1em;
+}
+
 .div-footer {
     border-top: none;
     width: 100%;
