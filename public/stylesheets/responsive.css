@@ -11,7 +11,7 @@
     .jumbotron p {
         max-width: 75%;
         margin: 1em auto 2em;
-        font-size: x-large;
+        font-size: large;
     }
 
     div.collapse.navbar-collapse {
@@ -243,5 +243,9 @@
 
     .alliances-logos {
         display: inline-flex;
+    }
+
+    .jumbotron p {
+        font-size: x-large;
     }
 }
